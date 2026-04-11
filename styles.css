@@ -452,8 +452,7 @@ header.scrolled .resume-btn {
 .work-section {
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
-  padding-bottom: 6rem;
+  padding: 5rem 0.5rem 6rem 0.5rem;
   gap: 3rem;
 }
 
@@ -618,7 +617,7 @@ header.scrolled .resume-btn {
 
 /* ABOUT SECTION */
 .about-section {
-  padding: 5rem 0;
+  padding: 5rem 0.5rem 6rem 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -728,7 +727,7 @@ header.scrolled .resume-btn {
 }
 
 .connect-section {
-  padding: 5rem 0;
+  padding: 5rem 0.5rem 6rem 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -862,7 +861,10 @@ footer {
   justify-content: center;
   background: var(--dark-black);
   border-radius: 1.125rem;
-  height: 64px;
+  min-height: 64px;
+  height: auto;
+  padding: 1rem;
+  text-align: center;
 }
 
 .footer-container p {
@@ -871,22 +873,29 @@ footer {
 }
 
 /* CASE STUDY SECTION */
+.case-study-main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 .case-hero {
   padding: 6rem 0.5rem 3.5rem 0.5rem;
 }
 
 .case-title {
   font-size: var(--fs-xxl);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-weight: var(--fw-semibold);
+  letter-spacing: -0.5px;
+  color: var(--dark-black);
 }
 
 .case-subtitle {
-  font-size: var(--fs-md);
-  margin-top: 0;
+  font-size: var(--fs-lg);
+  margin-top: 0.25rem;
   margin-bottom: 3.5rem;
-  color: var(--light-black);
-  font-weight: var(--fw-light);
+  color: var(--secondary-black);
+  font-weight: var(--fw-regular);
+  letter-spacing: -0.5px;
 }
 
 .divider {
@@ -907,12 +916,12 @@ footer {
 }
 
 .case-heading {
-  font-size: 2.25rem;
+  font-size: var(--fs-xxl);
   font-family: var(--font-heading);
-  color: var(--secondary-black);
-  font-weight: var(--fw-light);
+  color: var(--mid-black);
+  font-weight: var(--fw-thin);
   margin-bottom: 3rem;
-  line-height: 1.4;
+  line-height: 1.3;
   letter-spacing: -0.5px;
 }
 
@@ -923,7 +932,11 @@ footer {
 
 .case-main-image img {
   width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: top;
   display: block;
+  border-radius: 16px;
 }
 
 .case-meta-grid {
@@ -970,11 +983,21 @@ footer {
   margin-bottom: 1rem;
 }
 
+.case-section p {
+  font-size: var(--fs-md);
+  color: var(--secondary-black);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
 .case-subheading {
   font-size: var(--fs-md);
-  margin-top: 2rem;
+  margin-top: 40px;
   margin-bottom: 1rem;
   font-weight: var(--fw-semibold);
+  line-height: 1.6;
 }
 
 .case-image-wrapper {
@@ -985,10 +1008,11 @@ footer {
 .case-image-wrapper img {
   width: 100%;
   margin-bottom: 1rem;
+  border-radius: 16px;
 }
 
-.case-image-caption {
-  font-size: var(--fs-xs);
+.case-section p.case-image-caption {
+  font-size: 1rem;
   color: var(--text-muted);
   font-style: italic;
   margin-top: 0;
@@ -1239,8 +1263,7 @@ footer {
   }
 
   .work-section {
-    padding-top: 3.5rem;
-    padding-bottom: 4rem;
+    padding: 3.5rem 0.5rem 4rem 0.5rem;
   }
 
   .work-header {
@@ -1288,7 +1311,7 @@ footer {
   }
 
   .about-section {
-    padding: 3.5rem 0;
+    padding: 3.5rem 0.5rem;
   }
 
   .about-content {
@@ -1302,7 +1325,7 @@ footer {
   }
 
   .connect-section {
-    padding: 3.5rem 0 4rem 0;
+    padding: 3.5rem 0.5rem 4rem 0.5rem;
   }
 
   .connect-cta-banner {
@@ -1334,6 +1357,7 @@ footer {
 
   .case-heading {
     font-size: 1.75rem;
+    width: 100% !important;
   }
 
   .more-work-card {
@@ -1352,6 +1376,10 @@ footer {
 
 /* TABLET SPECIFIC OVERRIDES */
 @media (min-width: 600px) and (max-width: 900px) {
+  .case-meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .mobile-menu {
     width: 50%;
     left: auto;
@@ -1384,6 +1412,22 @@ footer {
 
 /* MOBILE SPECIFIC OVERRIDES */
 @media (max-width: 599px) {
+  .container {
+    margin: 0 1rem;
+  }
+  
+  .text-container {
+    padding: 0;
+  }
+  
+  .case-hero {
+    padding: 3.5rem 0 3.5rem 0;
+  }
+  
+  .case-section p.case-image-caption {
+    margin-left: 0;
+  }
+  
   .connect-cta-banner {
     padding: 2rem !important;
   }
