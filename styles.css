@@ -891,7 +891,7 @@ footer {
 
 .case-subtitle {
   font-size: var(--fs-lg);
-  margin-top: 0.25rem;
+  margin-top: 0.75rem;
   margin-bottom: 3.5rem;
   color: var(--secondary-black);
   font-weight: var(--fw-regular);
