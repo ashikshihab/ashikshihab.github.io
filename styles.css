@@ -463,8 +463,8 @@ header.scrolled .resume-btn {
 }
 
 .mc {
-  padding-bottom: 3.5rem;
-  border-bottom: 1px solid var(--border-warm);
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 
