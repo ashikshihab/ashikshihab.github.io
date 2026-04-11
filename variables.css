@@ -1,0 +1,39 @@
+:root {
+    /* Colors */
+    --primary-color: #DF553A;
+    --primary-hover: #ff9858;
+    --bg-color: hsl(47, 30%, 95%);
+    --dark-black: #180B09;
+    --white: #fafaf9;
+    --mid-black: #303037;
+    --secondary-black: #505057;
+    --light-black: #707077;
+    --text-muted: hsl(53, 2%, 45%);
+    --border-light: hsl(0, 0%, 80%);
+    --border-warm: #ebe5e0;
+
+    /* Typography */
+    --font-heading: "Plus Jakarta Sans", sans-serif;
+    --font-body: Inter, sans-serif;
+
+    /* Font Sizes */
+    --fs-base-px: 16px;
+    --fs-xs: 0.875rem;
+    --fs-sm: 1rem;
+    --fs-base: 1.125rem;
+    --fs-md: 1.25rem;
+    --fs-lg: 1.5rem;
+    --fs-xl: 2rem;
+    --fs-xxl: 3rem;
+    --fs-xxxl: 3.5rem;
+
+    /* Font Weights */
+    --fw-thin: 200;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-black: 900;
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}

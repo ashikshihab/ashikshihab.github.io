@@ -1,196 +1,319 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashik Shihab - UI/UX Designer</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Ashik Shihab — Product Designer</title>
+  <link rel="stylesheet" href="variables.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <!-- Header / Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="#home">Ashik Shihab</a>
-                </div>
-                <nav class="nav">
-                    <a href="#work">Work</a>
-                    <a href="#about">About</a>
-                    <a href="#connect">Connect</a>
-                    <a href="#" class="btn-resume">Resume</a>
-                </nav>
-            </div>
+  <header>
+    <div class="container container-nav">
+      <a href="/" class="logo" id="home-logo">AS</a>
+      <div class="nav-spacer"></div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-menu">
+        <div class="nav">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#connect">Connect</a>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <p class="hero-intro">Hi, I'm Ashik Shihab. Designing scalable B2B SaaS and analytics products.</p>
-            <h1 class="hero-heading">Product-Focused UI/UX Designer With 3+ Years In B2B SaaS And Analytics. I Design End-To-End Product Experiences And Growth Journeys, Supported By Scalable Design Systems.</h1>
-            <div class="hero-buttons">
-                <a href="#work" class="btn-primary">View Work</a>
-                <a href="#" class="btn-secondary">Resume</a>
-            </div>
-        </div>
+        <a href="assets/resume.pdf" class="resume-btn" target="_blank">
+          <span>Resume</span>
+          <img src="assets/arrow.svg" width="20" height="20" alt="Arrow Icon" />
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="container hero">
+      <h1 class="hero-title">Hi, I'm Ashik Shihab</h1>
+      <p class="hero-description">
+        Designing scalable B2B SaaS and analytics products
+      </p>
+      <p class="hero-additional-info">
+        <span class="bold">Product-focused UI/UX designer</span> with 3+ years
+        in B2B SaaS and analytics. I design
+        <span class="bold">end-to-end product experiences and growth journeys,</span>
+        supported by scalable design systems.
+      </p>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">
+          <span class="btn-label">View Work</span>
+          <span class="btn-arrow"><img src="assets/arrow.svg" width="20" height="20" alt="Arrow Icon" /></span>
+        </a>
+      </div>
     </section>
 
-    <!-- Shipped Work Section -->
-    <section id="work" class="shipped-work">
-        <div class="container">
-            <h2 class="section-heading">Shipped Work</h2>
-            
-            <!-- Project 1: MetricsCart -->
-            <div class="project">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3 class="project-title">MetricsCart</h3>
-                        <p class="project-subtitle">Digital Shelf Analytics Platform</p>
-                        <p class="project-description">Owned product and growth experience design including product UX, high-performance website builds, and brand experience direction.</p>
-                        <a href="#" class="btn-case-study">View Case Study</a>
-                    </div>
-                    <div class="project-details">
-                        <div class="detail-group">
-                            <h4 class="detail-heading">
-                                <span class="detail-icon">💼</span>
-                                Role
-                            </h4>
-                            <ul class="detail-list">
-                                <li>Product Designer</li>
-                                <li>Website Design + Development</li>
-                                <li>Brand & Creative Team Oversight</li>
-                            </ul>
-                        </div>
-                        <div class="detail-group">
-                            <h4 class="detail-heading">
-                                <span class="detail-icon">📈</span>
-                                Impact
-                            </h4>
-                            <ul class="detail-list">
-                                <li>Aligned UX across product and web</li>
-                                <li>Improved conversion and lead quality</li>
-                                <li>Consistent design system foundations</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <div class="visual-placeholder">
-                            <p>Dashboard Preview</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="container social-proof">
+      <div class="proof-text">
+        <h2>How I Contribute to <span class="text-accent">Product Teams</span></h2>
+        <div class="proof-subtext">
+          <p class="hero-description">From complex workflows to scalable systems, I design experiences that help
+            products
+            grow.</p>
 
-            <!-- Project 2: ScrapeHero -->
-            <div class="project">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3 class="project-title">ScrapeHero</h3>
-                        <p class="project-subtitle">Data as a Service Ecosystem</p>
-                        <p class="project-description">Led a complete UX and UI revamp of ScrapeHero's marketing website, marketplace, and data store, including design and development.</p>
-                        <a href="#" class="btn-case-study">View Case Study</a>
-                    </div>
-                    <div class="project-details">
-                        <div class="detail-group">
-                            <h4 class="detail-heading">
-                                <span class="detail-icon">💼</span>
-                                Role
-                            </h4>
-                            <ul class="detail-list">
-                                <li>Product & UX Design</li>
-                                <li>Website Design + Development</li>
-                                <li>Brand & Creative Team Oversight</li>
-                            </ul>
-                        </div>
-                        <div class="detail-group">
-                            <h4 class="detail-heading">
-                                <span class="detail-icon">📈</span>
-                                Impact
-                            </h4>
-                            <ul class="detail-list">
-                                <li>End-to-end UX alignment across platform</li>
-                                <li>Clearer discovery and purchase journeys</li>
-                                <li>Consistent UX and visual foundations</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <div class="visual-placeholder">
-                            <p>Website Preview</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="proof-cta" style="margin-top: 2rem;">
+            <a href="assets/resume.pdf" class="btn-primary" target="_blank">
+              <span class="btn-label">View Resume</span>
+              <span class="btn-arrow"><img src="assets/arrow.svg" width="20" height="20" alt="Arrow Icon" /></span>
+            </a>
+          </div>
         </div>
+      </div>
+
+      <div class="proof-grid">
+        <div class="proof-card proof-card-1">
+          <h4>Product + Growth UX</h4>
+          <p>Aligning product experience and marketing journeys to improve adoption.</p>
+        </div>
+        <div class="proof-card proof-card-2">
+          <h4>Scalable Design Systems</h4>
+          <p>Creating reusable UI foundations for consistent and scalable products.</p>
+        </div>
+        <div class="proof-card proof-card-3">
+          <h4>Complex Data UX</h4>
+          <p>Simplifying analytics workflows and data-heavy interfaces.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-heading">About Me</h2>
-            <div class="about-content">
-                <div class="about-bio">
-                    <p>I'm a product designer with a strong UX core, specializing in breaking down complex workflows and data-heavy problems into intuitive, scalable solutions. My approach to design is grounded in curiosity, logic, and structure—ensuring that every interface I create not only looks great but also functions seamlessly for users.</p>
-                    <p>Throughout my career, I've collaborated closely with product, engineering, and growth teams to deliver end-to-end experiences that drive both user satisfaction and business outcomes. I believe in taking ownership of design quality and experience consistency, whether I'm working on a single feature or an entire product ecosystem.</p>
-                    <p>My work spans product design, UX strategy, interface design, and information architecture—always with a focus on creating systems that can grow and evolve with the product. I'm passionate about using data-informed decision making and workflow thinking to solve real user problems.</p>
-                </div>
-                <div class="about-sidebar">
-                    <div class="work-experience">
-                        <h3 class="sidebar-heading">Work Experience</h3>
-                        <div class="experience-item">
-                            <h4 class="experience-title">UI/UX Designer</h4>
-                            <p class="experience-company">Turbotlab Technologies</p>
-                            <p class="experience-period">Aug 2022 - Present</p>
-                        </div>
-                        <div class="experience-item">
-                            <h4 class="experience-title">Freelance Designer</h4>
-                            <p class="experience-period">Feb 2019 - Jul 2022</p>
-                        </div>
-                    </div>
-                    <div class="skills">
-                        <h3 class="sidebar-heading">Skills</h3>
-                        <ul class="skills-list">
-                            <li>Product Design</li>
-                            <li>UX Strategy</li>
-                            <li>Interface & Interaction Design</li>
-                            <li>Information Architecture</li>
-                            <li>Data-Informed Decision Making</li>
-                            <li>Workflow & Systems Thinking</li>
-                            <li>Cross-Functional Collaboration</li>
-                            <li>Design Quality Ownership</li>
-                        </ul>
-                    </div>
-                </div>
+    <section id="work" class="container work-section">
+      <h2><span class="text-accent">Shipped</span> <br />Work</h2>
+      <div class="work-container mc">
+        <div class="work-header">
+          <h3>MetricsCart</h3>
+          <div class="work-connector"></div>
+          <p class="project-tagline">Digital Shelf analytics platform</p>
+        </div>
+        <div class="work-grid">
+          <div class="work-grid-left">
+            <div class="work-desc-group">
+              <p class="project-details">
+                Owned product and growth experience design including product
+                UX, high-performance website builds, and brand experience
+                direction.
+              </p>
+              <div style="margin-top: 1.5rem;">
+                <h4 class="impact-title">Impact</h4>
+                <p class="project-details">
+                  Aligned UX across product and web, improved conversion and lead quality, and built consistent design
+                  system foundations.
+                </p>
+              </div>
+              <a href="metricscart.html" class="btn-primary desktop-btn" style="margin-top: 2rem;">
+                <span class="btn-label">View Case Study</span>
+                <span class="btn-arrow"><img src="assets/arrow.svg" width="20" height="20" alt="Arrow Icon" /></span>
+              </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Let's Connect Section -->
-    <section id="connect" class="connect">
-        <div class="container">
-            <h2 class="section-heading">Let's Connect</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3 class="contact-label">Email</h3>
-                    <a href="mailto:ashikshihab101@gmail.com" class="contact-value">ashikshihab101@gmail.com</a>
+            <div class="work-cards">
+              <div class="work-role">
+                <div class="work-role-title">
+                  <h4>Role</h4>
                 </div>
-                <div class="contact-item">
-                    <h3 class="contact-label">Phone</h3>
-                    <p class="contact-value">+91 9682538275</p>
-                </div>
-                <div class="contact-item">
-                    <h3 class="contact-label">LinkedIn</h3>
-                    <a href="https://linkedin.com/in/ashik-shihab/" target="_blank" class="contact-value">linkedin.com/in/ashik-shihab/</a>
-                </div>
+                <ul class="work-role-list">
+                  <li>Product Designer</li>
+                  <li>Website Design + Development</li>
+                  <li>Brand & Creative Team Oversight</li>
+                </ul>
+              </div>
             </div>
+            <a href="metricscart.html" class="btn-primary mobile-btn" style="margin-top: 2rem;">
+              <span class="btn-label">View Case Study</span>
+              <span class="btn-arrow"><img src="assets/arrow.svg" width="20" height="20" alt="Arrow Icon" /></span>
+            </a>
+          </div>
+          <div class="work-grid-right">
+            <div class="work-image-container">
+              <img src="assets/mc.png" alt="MetricsCart Work Screenshot" class="work-image" />
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Ashik Shihab. All rights reserved.</p>
+      <div class="work-container sh">
+        <div class="work-header">
+          <h3>ScrapeHero</h3>
+          <div class="work-connector"></div>
+          <p class="project-tagline">Data as a Service Ecosystem</p>
         </div>
-    </footer>
+        <div class="work-grid">
+          <div class="work-grid-left">
+            <div class="work-desc-group">
+              <p class="project-details">
+                Led a complete UX and UI revamp of ScrapeHero’s marketing
+                website, marketplace, and data store, including design and
+                development.
+              </p>
+              <div style="margin-top: 1.5rem;">
+                <h4 class="impact-title">Impact</h4>
+                <p class="project-details">
+                  Created end-to-end UX alignment across the platform, clearer discovery and purchase journeys, and
+                  consistent UX and visual foundations.
+                </p>
+              </div>
+              <div class="coming-soon-notice" style="margin-top: 2rem;">
+                Case Study Coming Soon
+              </div>
+            </div>
+            <div class="work-cards">
+              <div class="work-role">
+                <div class="work-role-title">
+                  <h4>Role</h4>
+                </div>
+                <ul class="work-role-list">
+                  <li>Product & UX Designer</li>
+                  <li>Website Design + Development</li>
+                  <li>Brand & Creative Team Oversight</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="work-grid-right">
+            <div class="work-image-container">
+              <img src="assets/sh.png" alt="ScrapeHero Work Screenshot" class="work-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="container about-section">
+      <h2>About</br> <span class="text-accent">Me</span></h2>
+      <div class="about-content">
+        <div class="about-left">
+          <p>
+            I’m a
+            <span class="bold">product designer with a strong UX core</span>
+            working on B2B SaaS and analytics platforms. My strength is
+            <span class="bold">breaking down complex workflows and data-heavy problems</span>
+            into clear, usable product experiences. I approach design through
+            curiosity, logic, and structure, focusing on how the system works
+            before shaping the interface.
+          </p>
+          <p>
+            My work spans product features, marketplaces, and web platforms,
+            from interaction flows to shipped interfaces and production
+            builds. I collaborate closely with product, engineering, and
+            growth teams, using data, constraints, and usage patterns to guide
+            decisions.
+          </p>
+          <p>
+            Alongside hands-on design, I take ownership of
+            <span class="bold">design quality and experience consistency</span>
+            across projects. I contribute to direction, reviews, and workflow
+            improvements and move comfortably between product thinking,
+            detailed UX decisions, and execution.
+          </p>
+        </div>
+        <div class="about-right">
+          <div class="work-experience">
+            <h4>Work Experience</h4>
+            <div class="work-experience-item current-role">
+              <p class="work-experience-title">UI/UX designer</p>
+              <p class="work-experience-company">Turbolab Technologies</p>
+              <p class="work-experience-duration">Jan 2020 - Present</p>
+            </div>
+            <div class="work-experience-item past-role">
+              <p class="work-experience-title">Freelance Designer</p>
+              <p class="work-experience-duration">Feb 2019 - Jul 2022</p>
+            </div>
+          </div>
+
+          <div class="skills">
+            <h4>Skills</h4>
+            <ul class="skills-list">
+              <li>Product Design</li>
+              <li>UX Strategy</li>
+              <li>Interface & Interaction Design</li>
+              <li>Information Architecture</li>
+              <li>Data-Informed Decision Making</li>
+              <li>Workflow & Systems Thinking</li>
+              <li>Design Quality Ownership</li>
+              <li>Cross-Functional Collaboration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="connect" class="container connect-section">
+      <div class="connect-cta-banner"
+        style="display: flex; justify-content: space-between; align-items: stretch; background-color: var(--white); padding: 4rem; border-radius: 1.5rem; flex-wrap: wrap; gap: 3rem; border: 1px solid var(--border-warm);">
+
+        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; align-items: flex-start;">
+          <h2><span class="text-accent">Let's</span><br>connect</h2>
+          <a href="assets/resume.pdf" class="btn-primary hidden-mobile" target="_blank" style="margin-top: auto;">
+            <span class="btn-label">Download Resume</span>
+            <span class="btn-arrow"><img src="assets/arrow.svg" width="20" height="20" alt="Arrow Icon" /></span>
+          </a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2.5rem; max-width: 500px; flex: 1; min-width: 300px;">
+
+          <p
+            style="color: var(--light-black); font-size: 1rem; margin: 0; font-weight: var(--fw-light); line-height: 1.6;">
+            I'm always open to discussing product design work or partnership opportunities.</p>
+
+          <div>
+            <h4
+              style="display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 2.5px; font-size: var(--fs-xs); color: var(--text-muted); font-weight: var(--fw-regular); margin: 0 0 12px 0;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Email</h4>
+            <div class="connect-item" style="gap: 1rem;">
+              <a href="mailto:ashikshihab101@gmail.com">ashikshihab101@gmail.com</a>
+              <button class="icon-btn" aria-label="Copy Email"
+                onclick="navigator.clipboard.writeText('ashikshihab101@gmail.com'); this.innerHTML='<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><polyline points=\'20 6 9 17 4 12\'/></svg>'; setTimeout(()=>this.innerHTML='<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect width=\'14\' height=\'14\' x=\'8\' y=\'8\' rx=\'2\' ry=\'2\'/><path d=\'M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\'/></svg>', 2000);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="flex-shrink: 0;">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <h4
+              style="display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 2.5px; font-size: var(--fs-xs); color: var(--text-muted); font-weight: var(--fw-regular); margin: 0 0 12px 0;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn</h4>
+            <div class="connect-item" style="gap: 1rem;">
+              <a href="https://www.linkedin.com/in/ashik-shihab/" target="_blank">linkedin.com/in/ashik-shihab/</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; <span id="current-year">2024</span> Ashik Shihab. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
