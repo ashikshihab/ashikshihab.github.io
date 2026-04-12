@@ -13,7 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const showPopup = () => {
     if (!sessionStorage.getItem("exitIntentShown") && isDesktop()) {
       exitPopup.classList.add("show");
-      sessionStorage.setItem("exitIntentShown", "true"); // Fire only once per session
+      sessionStorage.setItem("exitIntentShown", "true"); 
+      
+      // Clarity: Track popup opening
+      if (typeof clarity === "function") {
+        clarity("event", "popup_opened");
+      }
     }
   };
 
@@ -23,6 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
       showPopup();
     }
   });
+
+  // Track LinkedIn clicks on popup
+  const popupLinkedin = exitPopup.querySelector(".btn-simple-linkedin");
+  if (popupLinkedin) {
+    popupLinkedin.addEventListener("click", () => {
+        if (typeof clarity === "function") {
+            clarity("event", "popup_linkedin_click");
+        }
+    });
+  }
 
   // Close functionality
   const closePopup = () => {
