@@ -652,7 +652,12 @@ header.scrolled .resume-btn {
   flex-direction: column;
 }
 
-.work-experience h4 {
+.work-experience h4,
+.skills h4 {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-xs);
+  color: var(--secondary-black);
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -705,8 +710,85 @@ header.scrolled .resume-btn {
   font-size: var(--fs-xs);
 }
 
+.sub-role-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.sub-role-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sub-role-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Vertical line between dots */
+.sub-role-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: -0.5px;
+  top: 0.55rem;
+  height: calc(100% + 1rem); /* Reaches the next dot */
+  width: 1px;
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+
+.sub-role-item::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 0.55rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  z-index: 2;
+}
+
+/* Adjust the dot for the current role */
+.sub-role-item:first-child::before {
+  border: 3px solid #F1B3A7;
+  left: -7px;
+  top: 0.55rem;
+  width: 9px;
+  height: 9px;
+}
+
+.sub-role-item .work-experience-title,
+.sub-role-item .work-experience-duration {
+  margin: 0;
+}
+
+.sub-role-item .work-experience-duration {
+  margin: 0;
+}
+
+.work-experience-group {
+  margin-bottom: 2rem;
+}
+
+.work-experience-group .work-experience-company {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: var(--fw-semibold);
+  color: var(--dark-black);
+}
+
+.work-experience-location {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
 .skills-list {
-  padding-top: 1rem;
+  padding-top: 0;
   list-style: none;
   display: flex;
   flex-direction: row;
