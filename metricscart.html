@@ -86,8 +86,7 @@
                 <div class="divider"></div>
 
                 <p class="case-eyebrow">Responsibilities</p>
-                <h2 class="case-heading">End-to-end product UX and web experience design for a data-heavy analytics
-                    application.</h2>
+                <h2 class="case-heading">Designed the MVP user interface for a quick-commerce digital shelf analytics platform. Designed and built the marketing site, focused on conversion and brand alignment.</h2>
             </div>
 
             <div class="case-main-image">
@@ -108,7 +107,7 @@
                         <span class="meta-title">Scope</span>
                         <ul>
                             <li>UX Strategy</li>
-                            <li>Complex Filtering Systems</li>
+                            <li>Conversion-Focused UX</li>
                             <li>Web Design + Development</li>
                         </ul>
                     </div>
@@ -125,120 +124,108 @@
         <section class="container case-content">
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Overview</h3>
-                    <p>MetricsCart is a digital shelf analytics platform that helps teams analyze performance, trends,
-                        and
-                        operational data across large datasets. The product is primarily used by non-technical users who
-                        need access to powerful analytics without dealing with complex query logic.</p>
-                    <p>I led the complete product design effort for the quick commerce platform, translating a detailed
-                        requirements document into a clear and scalable analytics experience. My work covered UX
-                        strategy,
-                        application and the product website. These improvements led to a 16× increase in CTR and established a steady stream of qualified leads.</p>
+                    <h3>Context</h3>
+                    <p>MetricsCart is a digital shelf analytics platform. The original product covers regular e-commerce. Quick-commerce is a separate product for brands tracking SKU performance on Blinkit, Zepto, Instamart, and similar 10-minute-delivery platforms.</p>
+                    <p>The Product Owner handed me a doc: KPIs, features, data structure. My job was making it useful. As the sole designer, I designed every screen, interaction, and visual pattern in the product. Approximately 30+ hi-fi screens covering dashboards, tabular views, geographic drill-down across multiple zoom levels, and the expand workspace.</p>
+                    <p><span class="bold">The team:</span> 1 PO, 1 product analyst, 5 to 6 engineers.</p>
                 </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Key Challenges</h3>
-                    <p>The core challenge was solving the analytics paradox: delivering powerful insights without making
-                        the
-                        product hard to use.</p>
-
-                    <h4 class="case-subheading">Challenge 1: Information Density & Cognitive Load</h4>
-                    <p>With hundreds of SKUs and dozens of computing KPIs, the interface risked becoming an unreadable
-                        "wall
-                        of data."</p>
-                    <p><span class="bold">Approach:</span> I used progressive disclosure and a clear visual hierarchy to
-                        surface key insights first. Summary tiles provided a quick pulse check, while detailed data
-                        stayed
-                        available without overwhelming the interface.</p>
-
-                    <h4 class="case-subheading">Challenge 2: Efficient Bulk Data Filtering</h4>
-                    <p>In a quick commerce environment, users aren't managing a single SKU but hundreds of locations and
-                        thousands of products at once. At this scale, standard dropdown filters quickly break down.</p>
-                    <p><span class="bold">Approach:</span> I designed a multi-select filtering system that supports bulk
-                        selection through visible tags and uses natural language operators like Is, Is not, and
-                        Contains.
-                        This made complex filtering easier to understand, faster to apply, and more reliable for
-                        non-technical users.</p>
+                    <h3>Who I designed for</h3>
+                    <p>Three user types share the product. They use it for different jobs.</p>
                 </div>
 
-                <!-- Use an image from your assets or placeholder -->
+                <div class="table-container">
+                    <table class="case-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>What they do</th>
+                                <th>What they need</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="bold">Brand managers</span></td>
+                                <td>Track their own SKUs across retailers. Need to spot anomalies and explain them internally.</td>
+                                <td>Fast scan, clear visual signals, presentable views.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="bold">Agencies</span></td>
+                                <td>Manage portfolios across multiple brand clients. Pull views into reports.</td>
+                                <td>Same as above, plus easy switching between brand contexts.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="bold">Researchers</span></td>
+                                <td>Analyse category-wide trends. Slice data, compare segments, export.</td>
+                                <td>Flexibility, raw data access, deeper filtering.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="text-container">
+                    <p>This shaped three of the four decisions that follow.</p>
+                </div>
+            </div>
+
+            <div class="case-section">
+                <div class="text-container">
+                    <h3>1. Two views, one switch</h3>
+                    <p>The spec was rich. Many filters across many dimensions. Multiple chart types. KPI cards. Dense tabular data. Without strong structure, a product like this fragments. Every screen feels like a separate tool.</p>
+                    <p>I designed it around two views of the same data: a <span class="bold">dashboard</span> for scanning, and a <span class="bold">tabular view</span> for inspecting. One switch at the top moves between them. Everything else lives inside one of those two views.</p>
+                    <p>This serves all three user types. Brand managers and agencies live mostly in the dashboard. Researchers live mostly in the tabular view. Both groups can move between the two when they need to. One switch, one mental model.</p>
+                </div>
+            </div>
+
+            <div class="case-section">
+                <div class="text-container">
+                    <h3>2. How filtering should work</h3>
+                    <p>Inside the tabular view, users can filter by any column. I considered two patterns.</p>
+                    <p>The first was a <span class="bold">chip-based filter with operators</span> (e.g., Brand IS Coca-Cola, Retailer IS NOT Blinkit). Flexible, demos well, has a learning curve before users get value. I built it out at mid-fi to evaluate it properly.</p>
+                    <p>The second was <span class="bold">standard column filters</span>: click a header, pick values, apply. Familiar from spreadsheets and BI tools. Less expressive, immediately usable.</p>
+                    <p>I shipped column filters. The decision came down to who would use them most. Brand managers and agencies use the tabular view occasionally, and column filters are immediately legible to them. Researchers, who spend more time here, would eventually outgrow column filters, but the gap is a v2 problem, not a v1 blocker.</p>
+                </div>
                 <div class="case-image-wrapper">
-                    <img src="assets/Mid-fidelity-filter.png" alt="MetricsCart Table Filters" />
-                    <p class="case-image-caption">The image above shows a mid-fidelity version of the filter design,
-                        focused on validating interaction patterns and filtering logic before final visual refinement.
-                    </p>
-                </div>
-
-                <div class="text-container">
-                    <h4 class="case-subheading">Challenge 3: Balancing the needs of casual viewers and power users</h4>
-                    <p>MetricsCart serves two distinct needs: the quick 10-second pulse check and the multi-hour
-                        deep-dive
-                        analysis. The challenge was integrating high-level power without intimidating casual users.</p>
-                    <p><span class="bold">Approach:</span> I focused on contextual power by embedding advanced tools
-                        like
-                        inline table filters and drill-down tooltips directly into the data. This keeps the interface
-                        clean
-                        for quick viewing while allowing deeper exploration exactly where users expect it, without
-                        relying
-                        on complex menus.</p>
+                    <img src="assets/Mid-fidelity-filter.png" alt="Mid-fidelity chip filter exploration" />
+                    <p class="case-image-caption">The chip pattern I explored before deciding on column filters.</p>
                 </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Website & Brand Strategy</h3>
-                    <p>In addition to the analytics app, I redesigned the MetricsCart marketing website to support
-                        discovery
-                        and conversion.</p>
-                    <p>The original site had a fragmented layout that made discovery difficult. I restructured the
-                        information architecture from a feature-led structure to a solution-focused flow aligned with
-                        user
-                        mental models.</p>
-
-                    <h4 class="case-subheading">Key improvements included:</h4>
-
-                    <p><span class="bold">Strategic Information Architecture:</span> I restructured the site hierarchy
-                        from
-                        a feature-led layout to a solution-focused flow. By aligning the information architecture with
-                        users' mental models, visitors could move from data problems to relevant MetricsCart solutions
-                        with
-                        fewer steps.</p>
-                    <p><span class="bold">Conversion-Driven UX:</span> I redesigned the core landing pages to reduce
-                        friction in the user journey. By simplifying the path to "Book a Demo" and clarifying the value
-                        proposition through clearer visual storytelling, I improved lead conversion and inbound quality.
-                    </p>
+                    <h3>3. The expand interaction</h3>
+                    <p>Charts on the dashboard are scannable but limited. A user spotting something interesting wants to dig in. Change the time period, slice the data differently, see the underlying products, all without losing where they are.</p>
+                    <p>The spec called for an "expand" affordance on each chart. What that should feel like was the design call.</p>
+                    <p>I designed expand as a <span class="bold">focused workspace</span> rather than a simple popup. Clicking expand opens a full-screen surface containing two things: the chart itself, now interactive with period filters and dimension toggles, and the underlying table beneath, with its own column filters.</p>
+                    <p>The user can iterate on either layer. Change the period on the chart, the table updates. Filter the table, both layers reflect the constraint. Both are visible together, both are controllable, neither is hidden behind a tab or another click.</p>
+                    <p>This pattern serves brand managers especially. They're the ones most often pulling on a thread from a chart. The dashboard sits underneath, dismissible with a close. Their place in the product stays intact.</p>
                 </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Brand & Creative Oversight</h3>
-                    <p>As a key member of the marketing team, I acted as the bridge between product and brand, ensuring
-                        a
-                        cohesive experience across every touchpoint.</p>
-                    <p><span class="bold">Elevating Team Output:</span> I standardized the visual language across all
-                        marketing assets, significantly raising the creative bar and ensuring a more professional,
-                        premium
-                        brand aesthetic.</p>
+                    <h3>4. Designing the geographic drill-down</h3>
+                    <p>The product uses geography heavily. Incidents tracked across country, state, district, and city levels. This was the most layout-intensive view to design.</p>
+                    <p>I designed the geographic view as a <span class="bold">map that changes representation as the user drills in:</span></p>
+                    <ul>
+                        <li><span class="bold">Country level:</span> a choropleth map of India, with red gradient indicating incident density per state.</li>
+                        <li><span class="bold">State level:</span> the same gradient at district granularity.</li>
+                        <li><span class="bold">City level:</span> bubble representations, with size indicating incident count.</li>
+                    </ul>
+                    <p>Each level shows the geographic visualization on top and the relevant tabular data below. Users drill in by clicking a region, out by clicking the breadcrumb. Filters from the dashboard top bar persist across levels.</p>
+                    <p>The hard part wasn't any single level. It was making the transitions between levels feel like one coherent system rather than separate views. I held a rule: the map's position, the table's position, and the filter state's behavior stay visually constant across drill-down levels. Only the granularity changes.</p>
                 </div>
             </div>
 
-            <div class="case-section case-final-section">
+            <div class="case-section">
                 <div class="text-container">
-                    <h3>Overall Impact</h3>
-
-                    <h4 class="case-subheading">Market-Ready Vision</h4>
-                    <p>Translated complex technical requirements into a polished, interactive product that
-                        defines the platform's market position.</p>
-
-                    <h4 class="case-subheading">Strategic IA & Conversion</h4>
-                    <p>Led product UX alignment across MetricsCart, redesigning the marketing experience to improve hierarchy and user journeys, resulting in a 16× increase in CTR and generating 12 qualified leads per month, while enhancing conversion, lead quality, and design consistency.</p>
-
-                    <h4 class="case-subheading">Unified Brand Trust</h4>
-                    <p>Established a "trust loop" by ensuring a seamless visual experience from the marketing
-                        website through to the deep-product analytics.</p>
+                    <h3>The marketing site</h3>
+                    <p>I also designed and built the MetricsCart marketing site (WordPress and Elementor).</p>
+                    <p>The original was feature-led. I restructured the IA around solutions, the problems users come in with, and rebuilt landing pages around a clearer demo-request path.</p>
+                    <p><span class="bold">Result:</span> CTA clicks went from ~500 to ~8,000/month (≈16×). 12 qualified demos per month, versus zero before launch. These conversations now feed customer discovery on the product side.</p>
                 </div>
             </div>
         </section>

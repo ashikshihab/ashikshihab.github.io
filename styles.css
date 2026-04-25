@@ -1000,7 +1000,7 @@ footer {
 }
 
 .case-heading {
-  font-size: var(--fs-xxl);
+  font-size: var(--fs-xl);
   font-family: var(--font-heading);
   color: var(--mid-black);
   font-weight: var(--fw-thin);
@@ -1054,7 +1054,7 @@ footer {
 }
 
 .case-content {
-  padding: 3.5rem 0.5rem 4rem 0.5rem;
+  padding: 3.5rem 0.5rem 0 0.5rem;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -1098,13 +1098,83 @@ footer {
 .case-section p.case-image-caption {
   font-size: 1rem;
   color: var(--text-muted);
-  font-style: italic;
-  margin-top: 0;
+  margin: 0;
+}
+
+.case-section ul {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.case-section ul li {
+  font-size: var(--fs-md);
+  color: var(--secondary-black);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+/* CASE STUDY TABLE */
+.table-container {
+  overflow-x: auto;
+  margin: 2.5rem 0;
+  border: 1px solid var(--border-warm);
+  border-radius: 12px;
+  background: var(--white);
+}
+
+.case-table {
+  width: 100%;
+  border-collapse: collapse;
   text-align: left;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-left: 1px solid var(--border-light);
-  margin-left: 1rem;
+}
+
+.case-table th {
+  background: var(--dark-black);
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  font-weight: var(--fw-semibold);
+  border-bottom: none;
+}
+
+.case-table td {
+  padding: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--secondary-black);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  border-bottom: 1px solid var(--border-warm);
+  vertical-align: top;
+}
+
+
+
+.case-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* PRINCIPLE BOX */
+.principle-box {
+  background: var(--bg-color);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  border-left: 4px solid var(--primary-color);
+}
+
+.case-principle {
+  font-family: var(--font-heading) !important;
+  font-size: var(--fs-lg) !important;
+  color: var(--dark-black) !important;
+  font-weight: var(--fw-semibold) !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
 }
 
 .case-final-section {
