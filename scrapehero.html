@@ -75,8 +75,7 @@
                 </a>
             </div>
         </div>
-    </header>    <main class="case-study-main">
-        <section class="container case-hero">
+    </header>        <section class="container case-hero">
             <div class="text-container">
                 <h1 class="case-title">ScrapeHero</h1>
                 <p class="case-subtitle">Data as a Service Ecosystem</p>
@@ -84,8 +83,7 @@
                 <div class="divider"></div>
 
                 <p class="case-eyebrow">Responsibilities</p>
-                <h2 class="case-heading">End-to-end UX and UI redesign of ScrapeHero's marketing website, Cloud
-                    marketplace, and Data Store including design system creation and full website development.</h2>
+                <h2 class="case-heading">Redesigned three connected surfaces of a global data-as-a-service ecosystem: the enterprise services practice, the self-serve marketplace, and a 3,200+ dataset e-commerce store.</h2>
             </div>
             <div class="text-container">
                 <div class="case-meta-grid">
@@ -119,109 +117,82 @@
         <section class="container case-content">
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Overview</h3>
-                    <p>ScrapeHero is a full-service data company trusted by Fortune 50 enterprises and 14,000+ customers
-                        globally. They offer web scraping services, a prebuilt API marketplace, and a self-serve
-                        data store, three distinct product lines serving very different types of buyers.</p>
-                    <p>I led the complete redesign of ScrapeHero's digital ecosystem, working across all three platforms
-                        to fix structural and UX problems. My work spanned user research, information architecture,
-                        interaction design, and full design-to-development delivery for the entire ecosystem.</p>
+                    <h3>Context</h3>
+                    <p>ScrapeHero is a data and web-scraping company with three business lines: an enterprise data-as-a-service practice (ScrapeHero Services), a self-serve product (ScrapeHero Cloud, with a Marketplace as its marketing site), and a data store selling 3,200+ POI datasets (ScrapeHero Data Store).</p>
+                    <p>I redesigned all three surfaces and the design system that holds them together. The product was already live with 14,000+ customers across the company, so my work was improvement and consolidation, not greenfield.</p>
+                    <p>I worked with PMs, sales teams, and other stakeholders to understand pain points, used PostHog and Microsoft Clarity to read user behaviour, and made the design calls.</p>
+                    <p>This case study walks through the work on each surface, then the design system that ties them.</p>
                 </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Key Challenges</h3>
-                    <p>The core challenge was the same across all three surfaces: ScrapeHero's products were technically 
-                        superior, but the interface made it difficult for buyers to reach them.</p>
+                    <h3>1. ScrapeHero Data Store</h3>
+                    <p>The Data Store sells point-of-interest datasets: addresses, store locations, hours, attributes, scraped from public sources. 3,200+ datasets across categories. Buyers are mixed: data analysts, researchers, business teams. They buy one-time downloads, subscribe for refreshed data, or request historical snapshots for time-series analysis.</p>
+                    <p>When I started, the store had every UX problem at once. Filtering didn't behave like a normal e-commerce filter. All datasets sat on one uncategorised page. Checkout had drop-off points that nobody had instrumented.</p>
 
-                    <h4 class="case-subheading">Challenge 1: Fragmented Navigation & IA</h4>
-                    <p>The marketing website lacked a coherent navigation structure. Each page felt 
-                        different from the next, and the information architecture was fragmented: users were bouncing
-                        between pages without finding a clear path to the specific data service they needed.</p>
-                    <p>Visually, the experience was inconsistent. Each page felt disconnected from the next, 
-                        making it difficult for enterprise buyers to trust and navigate the product offering effectively.</p>
+                    <h4 class="case-subheading">Listing cards</h4>
+                    <p>The original cards showed a name, a thumbnail, and a price. Buyers couldn't tell whether a dataset was fresh, how big it was, or what it covered without opening the PDP. Click-through rate was high, but qualified-purchase rate was low. People were clicking to evaluate, not to buy.</p>
+                    <p>I redesigned the cards to surface the metadata that drives the buying decision: coverage, last updated date, record count, and sample availability. The card stopped being an invitation to click and started being a small, scannable specification.</p>
+
+                    <h4 class="case-subheading">PDP and the historical data problem</h4>
+                    <p>Historical data is one of the highest-margin offerings on the store. The old PDP buried this option three scrolls down. I moved it next to the primary add-to-cart, framed as a clear option rather than a hidden upsell. Users evaluating a dataset now see the historical option at the moment they're deciding to buy.</p>
+
+                    <h4 class="case-subheading">Filters and category pages</h4>
+                    <p>I rebuilt the filter to follow standard e-commerce filter conventions (multi-select, applied state visible, clear reset). I categorised the datasets, then built individually optimised listing pages and PDP variants for each category. A dataset of restaurant locations now lives on a page tuned for its specific buyers, with relevant filters and metadata.</p>
+
+                    <h4 class="case-subheading">Checkout</h4>
+                    <p>I simplified the checkout flow, removed redundant steps, and made pricing context (one-time vs. subscription vs. historical) clearer at the moment users picked an option.</p>
                 </div>
 
                 <div class="case-image-wrapper">
-                    <img src="assets/sh-nav-redesign.png"
-                        alt="Restructured Information Architecture and Navigation System" />
-                    <p class="case-image-caption">Restructured navigation and information architecture across the main website.</p>
+                    <img src="assets/sh-datastore-redesign.png" alt="ScrapeHero Data Store Redesign" />
+                    <p class="case-image-caption">Redesigned Data Store featuring structured filters and metadata-rich listing cards.</p>
                 </div>
+            </div>
 
+            <div class="case-section">
                 <div class="text-container">
-                    <p><span class="bold">Approach:</span> I audited the full site and established a scalable navigation
-                        system built around the buyer's journey: from awareness to evaluation to action.</p>
-                    <p>I introduced consistent page templates and repositioned key CTAs to be visible at critical 
-                        decision moments. This made the site navigable even for users with no prior knowledge of ScrapeHero.</p>
+                    <h3>2. ScrapeHero Cloud and Marketplace</h3>
+                    <p>ScrapeHero Cloud is a self-serve product offering pre-built scrapers and APIs. I worked on two surgical fixes inside Cloud, both identified through PostHog session recordings and funnel analytics.</p>
 
-                    <h4 class="case-subheading">Challenge 2: Marketplace Discovery & Friction</h4>
-                    <p>ScrapeHero Cloud hosts a diverse library of scrapers, but poor filtering and categorization
-                        made discovery difficult. Users frequently struggled to find the right tool for their use case.</p>
-                    <p>Additionally, the "Free Plan" was buried, causing potential users to leave without realizing 
-                        they could start for free. High-intent users also faced detours in the subscription flow, 
-                        leading to drop-offs at the most critical moment.</p>
+                    <h4 class="case-subheading">The hidden Plan Upgrade</h4>
+                    <p>When users hit their plan limit, the upgrade button sent them to Settings, where plans were buried in a sub-tab. I worked with the team to change the flow. The upgrade button now goes straight to a dedicated Plans page. Small in design terms, significant in funnel terms.</p>
+
+                    <h4 class="case-subheading">The scraper detail page CTA</h4>
+                    <p>Each scraper had a primary CTA reading "Create a Project". For new users, this was confusing. I changed the CTA language and flow to "Use this scraper" with a first-run experience that didn't require users to understand project structure before getting value.</p>
+                    <p><span class="bold">Impact:</span> Together, the Plan Upgrade fix and the CTA fix improved subscription conversion by approximately 15% and reduced drop-off by approximately 10%, validated against PostHog before-and-after data.</p>
+
+                    <h4 class="case-subheading">The Marketplace revamp</h4>
+                    <p>Once Cloud's flows were stable, I redesigned the Marketplace. Better filters, clearer category labels, scannable scraper and API listings. I also built it around a scalable system, so when Cloud ships a new scraper or API, a new Marketplace page can be created without redesigning anything.</p>
                 </div>
 
                 <div class="case-image-wrapper">
                     <img src="assets/sh-marketplace-redesign.png" alt="Cloud Marketplace UX Revamp" />
-                    <p class="case-image-caption">Redesigned marketplace with improved filtering and prominent "Free Plan" surfacing.</p>
-                </div>
-
-                <div class="text-container">
-                    <p><span class="bold">Approach:</span> I revamped the marketplace with improved categorization and 
-                        multi-dimensional filters, significantly reducing the time required to find a relevant scraper.</p>
-                    <p>To reduce subscription friction, I used session recordings to identify and remove unnecessary 
-                        steps in the signup flow. I also surfaced the Free Plan prominently to lower the barrier 
-                        to entry and drive product-led growth.</p>
-
-                    <h4 class="case-subheading">Challenge 3: E-commerce UX in the Data Store</h4>
-                    <p>The Data Store had structural issues from listing to checkout. All datasets were grouped 
-                        regardless of industry or type, and listing pages lacked the key metadata buyers needed to evaluate them.</p>
-                    <p>Product pages also failed to highlight historical data, the most requested feature by customers. 
-                        The checkout flow was cumbersome, making simple transactions unnecessarily difficult for users.</p>
-                </div>
-
-                <div class="case-image-wrapper">
-                    <img src="assets/sh-datastore-redesign.png"
-                        alt="Data Store E-commerce Optimization" />
-                    <p class="case-image-caption">Redesigned Data Store featuring structured filters and metadata-rich listing cards.</p>
-                </div>
-
-                <div class="text-container">
-                    <p><span class="bold">Approach:</span> I redesigned the store based on research into what buyers look 
-                        for most. I introduced industry-standard filters and metadata indicators, such as freshness and 
-                        coverage, directly on the listing cards.</p>
-                    <p>The Product Detail Pages were rebuilt to lead with historical data, and the checkout flow 
-                        was streamlined to remove transactional friction, creating a much faster path to purchase.</p>
+                    <p class="case-image-caption">Redesigned marketplace with improved filtering and prominent plan surfacing.</p>
                 </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Design System Evolution</h3>
-                    <p>To ensure consistency, I developed a unified design system that scaled across the Marketing,
-                        Marketplace, and Store platforms. This was the first shared UI foundation in the company's history.</p>
-                    <p><span class="bold">Efficiency Gain:</span> By standardizing components like data tables and 
-                        filter bars, the team can now launch new product categories 40% faster while maintaining 
-                        a premium brand aesthetic.</p>
+                    <h3>3. ScrapeHero Services and the system</h3>
+                    <p>ScrapeHero Services is the enterprise side: custom data delivery for large clients. The site had 40+ pages suffering from inconsistent navigation, broken IA, and visual inconsistency between pages.</p>
+                    <p>I revamped all 40+ pages on a consistent design system, fixed the navigation and IA, and built page templates that the team could extend without re-designing each page from scratch.</p>
+
+                    <h4 class="case-subheading">The design system across all three surfaces</h4>
+                    <p>The connective tissue across the Data Store, Cloud, Marketplace, and Services site is one shared design system. Tokens, type scale, components, page templates, all of it lives in one place and is used across every surface. A user moving across these products experiences one brand, not three.</p>
+                </div>
+
+                <div class="case-image-wrapper">
+                    <img src="assets/sh-nav-redesign.png" alt="Restructured Information Architecture" />
+                    <p class="case-image-caption">Consistent navigation and architecture across the revamped enterprise services site.</p>
                 </div>
             </div>
 
-            <div class="case-section case-final-section">
+            <div class="case-section">
                 <div class="text-container">
-                    <h3>Overall Impact</h3>
-
-                    <h4 class="case-subheading">Unified Ecosystem</h4>
-                    <p>Transformed fragmented products into a cohesive ecosystem. The platform is now navigable 
-                        through logic, drastically improving how leads orient themselves.</p>
-
-                    <h4 class="case-subheading">Increased Conversion</h4>
-                    <p>Improved ScrapeHero’s conversion by 10% through UX optimization and data-driven iterations, aligning end-to-end journeys to enhance discovery, purchasing, and overall UX consistency.</p>
-
-                    <h4 class="case-subheading">Brand Trust</h4>
-                    <p>Established a consistent visual identity and UX across every touchpoint, building immediate trust 
-                        with enterprise buyers through transparency and professional quality.</p>
+                    <h3>Build and handover</h3>
+                    <p>I designed and built all three surfaces in WordPress with Elementor (Services site, Marketplace), and WooCommerce (Data Store). My associate designer now plays an integral role in key design decisions.</p>
                 </div>
             </div>
         </section>
