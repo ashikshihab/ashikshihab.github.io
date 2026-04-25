@@ -27,10 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handleScroll();
   window.addEventListener("scroll", handleScroll);
 
-  const currentYearElement = document.getElementById("current-year");
-  if (currentYearElement) {
-    currentYearElement.textContent = new Date().getFullYear();
-  }
+
 
   // Clarity Smart Events Tracking
   const trackEvent = (name) => {
