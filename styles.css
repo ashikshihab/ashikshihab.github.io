@@ -1593,4 +1593,14 @@ footer {
   .about-right {
     gap: 3rem;
   }
+
+  /* Table Mobile Fix */
+  .case-table {
+    min-width: 700px;
+  }
+  
+  .case-table th,
+  .case-table td {
+    padding: 1rem;
+  }
 }
