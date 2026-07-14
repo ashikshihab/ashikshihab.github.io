@@ -2,7 +2,7 @@
     /* Colors */
     --primary-color: #DF553A;
     --primary-hover: #ff9858;
-    --bg-color: hsl(47, 30%, 95%);
+    --bg-color: hsl(45, 31%, 96%);
     --dark-black: #180B09;
     --white: #fafaf9;
     --mid-black: #303037;
@@ -17,7 +17,7 @@
     --font-body: Inter, sans-serif;
 
     /* Font Sizes */
-    --fs-base-px: 16px;
+    --fs-base-px: 15px;
     --fs-xs: 0.875rem;
     --fs-sm: 1rem;
     --fs-base: 1.125rem;
@@ -31,6 +31,7 @@
     --fw-thin: 200;
     --fw-light: 300;
     --fw-regular: 400;
+    --fw-medium: 500;
     --fw-semibold: 600;
     --fw-black: 900;
 
