@@ -267,6 +267,11 @@ header.scrolled .resume-btn {
   color: var(--mid-black);
 }
 
+.hero-subtitle {
+  max-width: 70%;
+  font-size: var(--fs-md);
+}
+
 .hero-cta {
   display: flex;
   gap: 2rem;
@@ -967,8 +972,9 @@ footer {
 
 /* CASE STUDY SECTION */
 .case-study-main {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
+  padding-bottom: 6rem;
 }
 
 .case-hero {
@@ -1078,7 +1084,7 @@ footer {
 }
 
 .case-section p {
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   color: var(--light-black);
   font-weight: var(--fw-light);
   line-height: 1.6;
@@ -1117,7 +1123,7 @@ footer {
 }
 
 .case-section ul li {
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   color: var(--light-black);
   font-weight: var(--fw-light);
   line-height: 1.6;
@@ -1497,6 +1503,15 @@ footer {
 /* RESPONSIVE LAYOUTS */
 
 @media (max-width: 900px) {
+  h1, .hero-additional-info {
+    font-size: var(--fs-xl);
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+    font-size: var(--fs-base);
+  }
+
   .hero-toolkit {
     flex-direction: column;
     align-items: flex-start;
@@ -1550,7 +1565,7 @@ footer {
   }
 
   .hero-additional-info {
-    font-size: var(--fs-lg);
+    font-size: var(--fs-xl);
     max-width: 100%;
   }
 
@@ -1770,6 +1785,10 @@ footer {
 
 /* MOBILE SPECIFIC OVERRIDES */
 @media (max-width: 599px) {
+  .hero-avatar {
+    display: none;
+  }
+
   .container {
     margin: 0 1rem;
   }
