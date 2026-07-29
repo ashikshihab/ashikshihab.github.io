@@ -460,7 +460,7 @@ header.scrolled .resume-btn {
   display: flex;
   flex-direction: column;
   padding: 5rem 0.5rem 6rem 0.5rem;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .work-container {
@@ -471,6 +471,7 @@ header.scrolled .resume-btn {
 .mc {
   padding-bottom: 0;
   border-bottom: none;
+  margin-bottom: 4rem;
 }
 
 
