@@ -85,12 +85,12 @@
         <section class="container case-hero">
             <div class="text-container">
                 <h1 class="case-title">MetricsCart</h1>
-                <p class="case-subtitle">Digital Shelf Analytics Platform</p>
+                <p class="case-subtitle">Digital Shelf Analytics for Quick Commerce</p>
 
                 <div class="divider"></div>
 
                 <p class="case-eyebrow">Responsibilities</p>
-                <h2 class="case-heading">Sole designer of a quick-commerce digital shelf analytics product. Designed and built its marketing site for conversion and brand alignment.</h2>
+                <h2 class="case-heading">Sole designer. I owned two features end to end: availability monitoring, and pricing and promotion monitoring. Product, research, and the marketing site that feeds it.</h2>
             </div>
 
             <div class="case-main-image">
@@ -100,25 +100,26 @@
             <div class="text-container">
                 <div class="case-meta-grid">
                     <div class="meta-column">
-                        <span class="meta-title">My Role</span>
+                        <span class="meta-title">Role</span>
                         <ul>
-                            <li>Product & UX Design</li>
-                            <li>Website Design + Development</li>
-                            <li>Brand & Creative Team Oversight</li>
+                            <li>Product & UX</li>
+                            <li>Research</li>
+                            <li>Front-end</li>
                         </ul>
                     </div>
                     <div class="meta-column">
                         <span class="meta-title">Scope</span>
                         <ul>
-                            <li>UX Strategy</li>
-                            <li>Conversion-Focused UX</li>
-                            <li>Web Design + Development</li>
+                            <li>30+ screens</li>
+                            <li>Dashboard + explorer + geographic drill-down</li>
                         </ul>
                     </div>
                     <div class="meta-column">
-                        <span class="meta-title">Platform</span>
+                        <span class="meta-title">Team</span>
                         <ul>
-                            <li>Web (Data-Heavy SaaS)</li>
+                            <li>1 PO</li>
+                            <li>1 analyst</li>
+                            <li>5-6 engineers</li>
                         </ul>
                     </div>
                 </div>
@@ -129,68 +130,80 @@
             <div class="case-section">
                 <div class="text-container">
                     <h3>Context</h3>
-                    <p>MetricsCart is a digital shelf analytics platform. The original product covers regular e-commerce. Quick-commerce is a separate product for brands tracking SKU performance on Blinkit, Zepto, Instamart, and similar 10-minute-delivery platforms.</p>
-                    <p>The Product Owner handed me a doc: KPIs, features, data structure. My job was making it useful. As the sole designer, I designed every screen, interaction, and visual pattern in the product. Approximately 30+ hi-fi screens covering dashboards, tabular views, geographic drill-down across multiple zoom levels, and the expand workspace.</p>
-                    <p><span class="bold">The team:</span> 1 PO, 1 product analyst, 5 to 6 engineers.</p>
+                    <p>MetricsCart tracks how brands perform on quick-commerce platforms. Blinkit, Zepto, Instamart. A brand needs to know if their product is in stock, priced right, and running the promos they paid for, across every platform and location, every day.</p>
+                    <p>I was handed a doc. KPIs, features, data structure. A spec, not a brief.</p>
+                    <p>That gap was the job: turn a data structure into a product three different people could use. Solo, no research team.</p>
                 </div>
+
+            </div>
+
+            <div class="case-section">
+                <div class="text-container">
+                    <h3>Research</h3>
+                    <p>No research budget, no direct line to users. B2B, solo. I had two channels and used them on purpose.</p>
+                    <p><span class="bold">The podcast.</span> MetricsCart runs one. Quick-commerce experts come on as guests. I mined it for mental models: what they check first, what they distrust, how they reason about shelf performance.</p>
+                    <p><span class="bold">Sales.</span> They talk to customers daily and carry the friction: the confusion in demos, the requests that repeat.</p>
+                    <p>The podcast told me what good looks like. Sales told me where it breaks. I triangulated the two into three user types. The users below are derived, not invented.</p>
+                    <p>This was proxy research. I knew its limits, so the harder calls shipped as reversible bets with the uncertain parts flagged for real usage data.</p>
+                </div>
+
             </div>
 
             <div class="case-section">
                 <div class="text-container">
                     <h3>Who I designed for</h3>
-                    <p>Three user types share the product. They use it for different jobs.</p>
+                    <p>One product, three jobs, competing needs. That tension drove the architecture.</p>
+                    <ul>
+                        <li><span class="bold">Brand managers</span> track their own SKUs and explain anomalies internally. Need fast scan, clear signal. &rarr; Dashboard</li>
+                        <li><span class="bold">Agencies</span> manage many client portfolios and pull views into reports. Need fast context switching. &rarr; Dashboard</li>
+                        <li><span class="bold">Researchers</span> slice category-wide data, compare, export. Need raw access and deep filtering. &rarr; Explorer</li>
+                    </ul>
                 </div>
 
-                <div class="table-container">
-                    <table class="case-table">
-                        <thead>
-                            <tr>
-                                <th>User</th>
-                                <th>What they do</th>
-                                <th>What they need</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span class="bold">Brand managers</span></td>
-                                <td>Track their own SKUs across retailers. Need to spot anomalies and explain them internally.</td>
-                                <td>Fast scan, clear visual signals, presentable views.</td>
-                            </tr>
-                            <tr>
-                                <td><span class="bold">Agencies</span></td>
-                                <td>Manage portfolios across multiple brand clients. Pull views into reports.</td>
-                                <td>Same as above, plus easy switching between brand contexts.</td>
-                            </tr>
-                            <tr>
-                                <td><span class="bold">Researchers</span></td>
-                                <td>Analyse category-wide trends. Slice data, compare segments, export.</td>
-                                <td>Flexibility, raw data access, deeper filtering.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="text-container">
-                    <p>This shaped three of the four decisions that follow.</p>
-                </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>1. Two views, one switch</h3>
-                    <p>The spec was rich. Many filters across many dimensions. Multiple chart types. KPI cards. Dense tabular data. Without strong structure, a product like this fragments. Every screen feels like a separate tool.</p>
-                    <p>I designed it around two views of the same data: a <span class="bold">dashboard</span> for scanning, and a <span class="bold">tabular view</span> for inspecting. One switch at the top moves between them. Everything else lives inside one of those two views.</p>
-                    <p>This serves all three user types. Brand managers and agencies live mostly in the dashboard. Researchers live mostly in the tabular view. Both groups can move between the two when they need to. One switch, one mental model.</p>
+                    <h3>The core problem</h3>
+                    <p>The spec was rich. Many metrics, many dimensions, multiple chart types, dense tables. Two forces threatened it.</p>
+                    <p><span class="bold">Density fragments.</span> Without structure, every view becomes its own tool and the user is lost.</p>
+                    <p><span class="bold">The domain moves daily.</span> Stock, prices, promos shift day to day. So an absolute number is nearly useless. "54% available" means nothing. "Down 12% from yesterday" is the whole signal.</p>
+                    <p>So: hold density together, and build around change, not state.</p>
                 </div>
+
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>2. How filtering should work</h3>
-                    <p>Inside the tabular view, users can filter by any column. I considered two patterns.</p>
-                    <p>The first was a <span class="bold">chip-based filter with operators</span> (e.g., Brand IS Coca-Cola, Retailer IS NOT Blinkit). Flexible, demos well, has a learning curve before users get value. I built it out at mid-fi to evaluate it properly.</p>
-                    <p>The second was <span class="bold">standard column filters</span>: click a header, pick values, apply. Familiar from spreadsheets and BI tools. Less expressive, immediately usable.</p>
-                    <p>I shipped column filters. The decision came down to who would use them most. Brand managers and agencies use the tabular view occasionally, and column filters are immediately legible to them. Researchers, who spend more time here, would eventually outgrow column filters, but the gap is a v2 problem, not a v1 blocker.</p>
+                    <h3>Decision 1: Overview and explorer</h3>
+                    <p>The daily rhythm gave me the split.</p>
+                    <p><span class="bold">Dashboard is the overview.</span> KPI cards, each carrying its day-over-day change. Green good, red bad. It answers what changed since yesterday? You open it in the morning and the deltas tell you where to look.</p>
+                    <p><span class="bold">Explorer is the power tool.</span> The tabular view. Once a delta flags something, you come here for why, and where exactly?</p>
+                    <p>Not a toggle. A workflow. The dashboard surfaces the anomaly, the explorer investigates it. One switch moves between them. Brand managers and agencies live on the dashboard, researchers in the explorer, both cross over when the work needs it.</p>
+                </div>
+
+            </div>
+
+            <div class="case-section">
+                <div class="text-container">
+                    <h3>Decision 2: The explorer's columns</h3>
+                    <p>The stakeholder wanted every column visible. Across both features that is 20-30. The instinct was fair: brands paid for this data.</p>
+                    <p>A table that wide is unusable, and scanning is the whole job of the explorer. So the question was not which columns to cut. It was which earn a permanent seat, and where the rest lives without leaving the table.</p>
+                    <p>I split columns by how they get used.</p>
+                    <p><span class="bold">Scan-across data stays as columns.</span> The metrics you read horizontally to spot an anomaly: product, availability, price, discount, promo flags, each with its day-over-day change.</p>
+                    <p><span class="bold">Read-about-one data goes in the row.</span> The metadata you only check for a single product after something catches your eye: flavour, pack, location breakdown, category mapping. Each row expands in place into grouped detail. One row open at a time, same table.</p>
+                    <p>The table stays narrow and scannable. Completeness is one click away and never lost.</p>
+                </div>
+
+            </div>
+
+            <div class="case-section">
+                <div class="text-container">
+                    <h3>Decision 3: How filtering works</h3>
+                    <p>Two patterns to decide between.</p>
+                    <p><span class="bold">Chip filter with operators.</span> Brand IS Coca-Cola, Retailer IS NOT Blinkit. Expressive, demos well, but a learning curve.</p>
+                    <p><span class="bold">Column filters.</span> Click a header, pick values, apply. Familiar, immediately legible.</p>
+                    <p>I built the chip pattern to mid-fi, then shipped column filters. Brand managers and agencies pass through occasionally and read column filters on sight. Researchers spend the most time here and would outgrow them, but that is a v2 problem, not a v1 blocker. I did not want the daily user paying a learning tax to serve a power case I could add later.</p>
                 </div>
                 <div class="case-image-wrapper">
                     <img src="assets/Mid-fidelity-filter.png" alt="Mid-fidelity chip filter exploration" />
@@ -200,35 +213,34 @@
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>3. The expand interaction</h3>
-                    <p>Charts on the dashboard are scannable but limited. A user spotting something interesting wants to dig in. Change the time period, slice the data differently, see the underlying products, all without losing where they are.</p>
-                    <p>The spec called for an "expand" affordance on each chart. What that should feel like was the design call.</p>
-                    <p>I designed expand as a <span class="bold">focused workspace</span> rather than a simple popup. Clicking expand opens a full-screen surface containing two things: the chart itself, now interactive with period filters and dimension toggles, and the underlying table beneath, with its own column filters.</p>
-                    <p>The user can iterate on either layer. Change the period on the chart, the table updates. Filter the table, both layers reflect the constraint. Both are visible together, both are controllable, neither is hidden behind a tab or another click.</p>
-                    <p>This pattern serves brand managers especially. They're the ones most often pulling on a thread from a chart. The dashboard sits underneath, dismissible with a close. Their place in the product stays intact.</p>
+                    <h3>Decision 4: The expand interaction</h3>
+                    <p>Charts on the dashboard are scannable but shallow. A user who spots something wants to dig in without losing their place.</p>
+                    <p>I designed expand as a focused workspace, not a popup. It opens a full-screen surface with two live layers: the chart, still interactive, and the underlying table beneath it. Work either layer and both reflect it. The dashboard sits underneath, one close away.</p>
                 </div>
+
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>4. Designing the geographic drill-down</h3>
-                    <p>The product uses geography heavily. Incidents tracked across country, state, district, and city levels. This was the most layout-intensive view to design.</p>
-                    <p>I designed the geographic view as a <span class="bold">map that changes representation as the user drills in:</span></p>
-                    <ul>
-                        <li><span class="bold">Country level:</span> a choropleth map of India, with red gradient indicating incident density per state.</li>
-                        <li><span class="bold">State level:</span> the same gradient at district granularity.</li>
-                        <li><span class="bold">City level:</span> bubble representations, with size indicating incident count.</li>
-                    </ul>
-                    <p>Each level shows the geographic visualization on top and the relevant tabular data below. Users drill in by clicking a region, out by clicking the breadcrumb. Filters from the dashboard top bar persist across levels.</p>
-                    <p>The hard part wasn't any single level. It was making the transitions between levels feel like one coherent system rather than separate views. I held a rule: the map's position, the table's position, and the filter state's behavior stay visually constant across drill-down levels. Only the granularity changes.</p>
+                    <h3>Decision 5: Geographic drill-down</h3>
+                    <p>Incidents track across country, state, district, city. The most layout-intensive view.</p>
+                    <p>The map changes representation as you drill in: choropleth of India at country level, the same gradient at district level, sized bubbles at city level. Filters persist across every level.</p>
+                    <p>The hard part was the transitions. I held one rule: the map's position and behaviour stay constant, only granularity changes. Same object, more detail. Never a new screen.</p>
                 </div>
+
             </div>
 
             <div class="case-section">
                 <div class="text-container">
                     <h3>The marketing site</h3>
-                    <p>I designed and built the marketing site in WordPress with Elementor. The original was feature-led. I restructured the IA around solutions, the problems users come in with, and rebuilt landing pages around a clearer demo-request path.</p>
-                    <p><span class="bold">Result:</span> CTA clicks went from ~500 to ~8,000/month (≈16×). 12 qualified demos per month, versus zero before launch. These conversations now feed customer discovery on the product side.</p>
+                    <p>I also built the marketing site in WordPress, restructured around the problems users arrive with. CTA clicks went from ~500 to ~8,000 a month, generating around 12 qualified demos a month versus zero before. That pipeline feeds product discovery. The product work above is the case.</p>
+                </div>
+            </div>
+
+            <div class="case-section">
+                <div class="text-container">
+                    <h3>Reflection</h3>
+                    <p>Proxy research gave strong direction, not ground truth, so the uncertain calls stayed reversible. The chip filter earns in if usage shows researchers hitting the column-filter ceiling. What held across every decision was the spine: build a dense product around what changed, not what is, and never let density fragment the surface.</p>
                 </div>
             </div>
         </section>

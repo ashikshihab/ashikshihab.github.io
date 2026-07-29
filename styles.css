@@ -29,6 +29,8 @@ a {
   color: inherit;
 }
 
+
+
 /* DEFAULT SECTION SPACING */
 section {
   border-bottom: 1px solid var(--border-light);
@@ -231,7 +233,7 @@ header.scrolled .resume-btn {
 .bold {
   font-size: inherit;
   font-weight: var(--fw-medium);
-  color: var(--mid-black);
+  color: var(--dark-black);
 }
 
 .hero {
@@ -239,10 +241,11 @@ header.scrolled .resume-btn {
 }
 
 .hero-title {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-base);
   line-height: 1.6;
   margin-bottom: 0rem;
   font-weight: var(--fw-medium);
+  color: var(--secondary-black);
 }
 
 .hero-description {
@@ -256,8 +259,8 @@ header.scrolled .resume-btn {
 }
 
 .hero-additional-info {
-  font-size: var(--fs-xl);
-  line-height: 1.6;
+  font-size: var(--fs-xxl);
+  line-height: 1.2;
   margin: 2rem 0;
   font-weight: var(--fw-light);
   max-width: 85%;
