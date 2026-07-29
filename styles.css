@@ -42,9 +42,21 @@ h1 {
   color: var(--dark-black);
 }
 
-h2,
-h3,
+h2 {
+  font-family: var(--font-mono);
+  color: var(--mid-black);
+}
+
 h4 {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: var(--fw-regular);
+}
+
+h3 {
   font-family: var(--font-heading);
   color: var(--mid-black);
 }
@@ -147,6 +159,7 @@ header {
   justify-content: end;
   border-radius: 1rem;
   padding: 0.5rem;
+  padding-right: 1rem;
   box-shadow: none;
 }
 
@@ -636,6 +649,7 @@ header.scrolled .resume-btn {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  border-bottom: none;
 }
 
 .about-content {
@@ -977,8 +991,19 @@ footer {
   padding-bottom: 6rem;
 }
 
+.case-study-main section {
+  border-bottom: none;
+}
+
+.case-study-main h4 {
+  font-family: var(--font-heading);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
 .case-hero {
   padding: 6rem 0.5rem 3.5rem 0.5rem;
+  border-bottom: none;
 }
 
 .case-title {
@@ -1006,6 +1031,7 @@ footer {
 }
 
 .case-eyebrow {
+  font-family: var(--font-mono);
   font-size: var(--fs-xs);
   color: var(--text-muted);
   text-transform: uppercase;
@@ -1047,7 +1073,7 @@ footer {
 
 .meta-column .meta-title {
   display: block;
-  font-family: var(--font-heading);
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-size: var(--fs-xs);
@@ -1071,7 +1097,6 @@ footer {
 
 .case-content {
   padding: 3.5rem 0.5rem 0 0.5rem;
-  border-bottom: 1px solid var(--border-light);
 }
 
 .case-section {
@@ -1787,6 +1812,10 @@ footer {
 @media (max-width: 599px) {
   .hero-avatar {
     display: none;
+  }
+
+  .hero-social {
+    display: none !important;
   }
 
   .container {

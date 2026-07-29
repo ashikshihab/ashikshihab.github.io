@@ -2,7 +2,7 @@
     /* Colors */
     --primary-color: #DF553A;
     --primary-hover: #ff9858;
-    --bg-color: hsl(45, 31%, 96%);
+    --bg-color: hsl(40, 30%, 97%);
     --dark-black: #180B09;
     --white: #fafaf9;
     --mid-black: #303037;
@@ -13,8 +13,9 @@
     --border-warm: #ebe5e0;
 
     /* Typography */
-    --font-heading: "Plus Jakarta Sans", sans-serif;
-    --font-body: Inter, sans-serif;
+    --font-heading: "Hanken Grotesk", sans-serif;
+    --font-body: "Hanken Grotesk", sans-serif;
+    --font-mono: "Geist Mono", monospace;
 
     /* Font Sizes */
     --fs-base-px: 16px;

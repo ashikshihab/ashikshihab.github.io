@@ -29,20 +29,9 @@
     <link rel="stylesheet" href="variables.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -59,7 +48,7 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
     <header>
-        <div class="container container-nav">
+        <div class="container container-nav" style="max-width: 1000px;">
             <a href="/" class="logo" id="home-logo">AS</a>
             <div class="nav-spacer"></div>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -71,7 +60,6 @@
                 <div class="nav">
                     <a href="/#work">Work</a>
                     <a href="/#about">About</a>
-                    <a href="#connect">Connect</a>
                 </div>
                 <a href="Ashik_Shihab.pdf" class="resume-btn" target="_blank">
                     <span>Resume</span>
@@ -246,9 +234,14 @@
         </section>
 
     </main>
-    <footer>
-        <div class="container footer-container">
-            <p>&copy; 2026 Ashik Shihab</p>
+    <footer style="border-top: 1px solid var(--border-light); padding: 2rem 0;">
+        <div class="container" style="max-width: 1000px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div style="font-family: var(--font-heading); font-weight: var(--fw-medium);">Ashik Shihab</div>
+            <div style="display: flex; gap: 1rem; font-size: var(--fs-xs); font-family: var(--font-mono);">
+                <a href="https://www.linkedin.com/in/ashik-shihab/" target="_blank" style="color: var(--light-black); font-size: var(--fs-xs); font-family: var(--font-mono); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--light-black)'">LinkedIn</a>
+                <span style="color: var(--border-light); display: flex; align-items: center;">|</span>
+                <button onclick="navigator.clipboard.writeText('ashikshihab101@gmail.com'); const text = this; const origText = 'ashikshihab101@gmail.com'; text.innerText = 'Copied!'; setTimeout(() => { text.innerText = origText; }, 2000);" style="color: var(--light-black); font-size: var(--fs-xs); font-family: var(--font-mono); text-decoration: none; transition: var(--transition-smooth); background: none; border: none; padding: 0; cursor: pointer;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--light-black)'">ashikshihab101@gmail.com</button>
+            </div>
         </div>
     </footer>
     <script src="script.js"></script>

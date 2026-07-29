@@ -34,20 +34,9 @@
   <link rel="stylesheet" href="variables.css" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-    rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -76,7 +65,6 @@
         <div class="nav">
           <a href="#work">Work</a>
           <a href="#about">About</a>
-          <a href="#connect">Connect</a>
         </div>
         <a href="Ashik_Shihab.pdf" class="resume-btn" target="_blank">
           <span>Resume</span>
@@ -100,11 +88,22 @@
       <p class="hero-subtitle" style="margin-top: 0; margin-bottom: 4rem; color: var(--light-black);">
         I've worked across <span class="bold">analytics platforms</span>, <span class="bold">marketplaces</span>, and <span class="bold">data products</span>. Decisions driven by usage data, not opinion.
       </p>
-      <div class="hero-cta">
+      <div class="hero-cta" style="align-items: center;">
         <a href="#work" class="btn-primary">
           <span class="btn-label">View Work</span>
           <span class="btn-arrow"><img src="assets/arrow.svg" width="20" height="20" alt="Arrow Icon" /></span>
         </a>
+        <div class="hero-social" style="display: flex; gap: 1rem; font-size: var(--fs-xs); font-family: var(--font-mono); margin-left: auto;">
+          <a href="https://www.linkedin.com/in/ashik-shihab/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; color: var(--light-black); font-size: var(--fs-xs); font-family: var(--font-mono); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--light-black)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Connect
+          </a>
+          <span style="color: var(--border-light); display: flex; align-items: center;">|</span>
+          <button onclick="navigator.clipboard.writeText('ashikshihab101@gmail.com'); const icon = this.querySelector('.copy-icon'); const text = this.querySelector('.copy-text'); const origIcon = icon.innerHTML; icon.innerHTML = '<polyline points=\'20 6 9 17 4 12\'></polyline>'; text.innerText = 'Copied!'; setTimeout(() => { icon.innerHTML = origIcon; text.innerText = 'Copy Mail'; }, 2000);" style="display: flex; align-items: center; gap: 0.5rem; color: var(--light-black); font-size: var(--fs-xs); font-family: var(--font-mono); text-decoration: none; transition: var(--transition-smooth); background: none; border: none; padding: 0; cursor: pointer;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--light-black)'">
+            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span class="copy-text" style="font-size: var(--fs-xs); font-family: var(--font-mono);">Copy Mail</span>
+          </button>
+        </div>
       </div>
 
     </section>
@@ -261,69 +260,15 @@
         </div>
       </div>
     </section>
-    <section id="connect" class="container connect-section">
-      <div class="connect-cta-banner"
-        style="display: flex; justify-content: space-between; align-items: stretch; background-color: var(--white); padding: 4rem; border-radius: 1.5rem; flex-wrap: wrap; gap: 3rem; border: 1px solid var(--border-warm);">
-
-        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; align-items: flex-start;">
-          <h2><span class="text-accent">Let's</span><br>connect</h2>
-          <a href="Ashik_Shihab.pdf" class="btn-primary hidden-mobile" target="_blank" style="margin-top: auto;">
-            <span class="btn-label">View Resume</span>
-            <span class="btn-arrow"><img src="assets/arrow.svg" width="20" height="20" alt="Arrow Icon" /></span>
-          </a>
-        </div>
-
-        <div style="display: flex; flex-direction: column; gap: 2.5rem; max-width: 500px; flex: 1; min-width: 300px;">
-
-          <p
-            style="color: var(--light-black); font-size: 1rem; margin: 0; font-weight: var(--fw-light); line-height: 1.6;">
-            I'm always open to discussing product design work or partnership opportunities.</p>
-
-          <div>
-            <h4
-              style="display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 2.5px; font-size: var(--fs-xs); color: var(--text-muted); font-weight: var(--fw-regular); margin: 0 0 12px 0;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              Email
-            </h4>
-            <div class="connect-item" style="gap: 1rem;">
-              <a href="mailto:ashikshihab101@gmail.com">ashikshihab101@gmail.com</a>
-              <button class="icon-btn" aria-label="Copy Email"
-                onclick="navigator.clipboard.writeText('ashikshihab101@gmail.com'); this.innerHTML='<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><polyline points=\'20 6 9 17 4 12\'/></svg>'; setTimeout(()=>this.innerHTML='<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect width=\'14\' height=\'14\' x=\'8\' y=\'8\' rx=\'2\' ry=\'2\'/><path d=\'M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\'/></svg>', 2000);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  style="flex-shrink: 0;">
-                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div>
-            <h4
-              style="display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 2.5px; font-size: var(--fs-xs); color: var(--text-muted); font-weight: var(--fw-regular); margin: 0 0 12px 0;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
-                style="flex-shrink: 0;">
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-              LinkedIn
-            </h4>
-            <div class="connect-item" style="gap: 1rem;">
-              <a href="https://www.linkedin.com/in/ashik-shihab/" target="_blank">linkedin.com/in/ashik-shihab/</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
-  <footer>
-    <div class="container footer-container">
-      <p>&copy; 2026 Ashik Shihab</p>
+  <footer style="border-top: 1px solid var(--border-light); padding: 2rem 0;">
+    <div class="container" style="max-width: 1000px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div style="font-family: var(--font-heading); font-weight: var(--fw-medium);">Ashik Shihab</div>
+      <div style="display: flex; gap: 1rem; font-size: var(--fs-xs); font-family: var(--font-mono);">
+        <a href="https://www.linkedin.com/in/ashik-shihab/" target="_blank" style="color: var(--light-black); font-size: var(--fs-xs); font-family: var(--font-mono); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--light-black)'">LinkedIn</a>
+        <span style="color: var(--border-light); display: flex; align-items: center;">|</span>
+        <button onclick="navigator.clipboard.writeText('ashikshihab101@gmail.com'); const text = this; const origText = 'ashikshihab101@gmail.com'; text.innerText = 'Copied!'; setTimeout(() => { text.innerText = origText; }, 2000);" style="color: var(--light-black); font-size: var(--fs-xs); font-family: var(--font-mono); text-decoration: none; transition: var(--transition-smooth); background: none; border: none; padding: 0; cursor: pointer;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--light-black)'">ashikshihab101@gmail.com</button>
+      </div>
     </div>
   </footer>
 
