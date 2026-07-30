@@ -153,7 +153,7 @@ header {
   flex-direction: row;
   align-content: center;
   gap: 1.5rem;
-  background: var(--dark-black);
+  background: #CDFEBD;
   width: 100%;
   align-items: center;
   justify-content: end;
@@ -164,7 +164,7 @@ header {
 }
 
 .nav a {
-  color: var(--white);
+  color: var(--dark-black);
   padding: 0.75rem;
   background: transparent;
   border-radius: 1rem;
@@ -180,9 +180,9 @@ header {
   font-family: var(--font-heading);
   font-weight: var(--fw-black);
   font-size: var(--fs-md);
-  background: var(--primary-color);
+  background: #CDFEBD;
   border-radius: 1.125rem;
-  color: var(--white);
+  color: var(--dark-black);
   box-shadow: none;
   display: flex;
   align-items: center;
@@ -196,9 +196,9 @@ header {
 .resume-btn {
   display: flex;
   padding: 1rem 1.5rem;
-  background: var(--dark-black);
+  background: #CDFEBD;
   border-radius: 1.125rem;
-  color: #fff;
+  color: var(--dark-black);
   align-items: center;
   justify-content: center;
   min-width: 150px;
@@ -211,7 +211,7 @@ header.scrolled .nav,
 header.scrolled .logo,
 header.scrolled .nav-spacer,
 header.scrolled .resume-btn {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
   transition: box-shadow 0.3s ease;
 }
 
@@ -250,7 +250,7 @@ header.scrolled .resume-btn {
 }
 
 .hero {
-  padding: 5rem 0.5rem 6rem 0.5rem;
+  padding: 6rem 0.5rem 6rem 0.5rem;
 }
 
 .hero-title {
@@ -783,7 +783,7 @@ header.scrolled .resume-btn {
 
 /* Adjust the dot for the current role */
 .sub-role-item:first-child::before {
-  border: 3px solid #F1B3A7;
+  border: 3px solid var(--primary-hover);
   left: -7px;
   top: 0.55rem;
   width: 9px;
@@ -1646,6 +1646,7 @@ footer {
 
   .container-nav .nav a {
     background: var(--dark-black);
+    color: var(--white);
     border-radius: 16px;
     width: 100%;
     text-align: center;

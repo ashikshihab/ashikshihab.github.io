@@ -1,14 +1,14 @@
 :root {
     /* Colors */
-    --primary-color: #DF553A;
-    --primary-hover: #ff9858;
-    --bg-color: hsl(40, 30%, 97%);
-    --dark-black: #180B09;
+    --primary-color: hsl(136, 51%, 35%);
+    --primary-hover: #CDFEBD;
+    --bg-color: hsl(60, 17%, 94%);
+    --dark-black: #000;
     --white: #fafaf9;
-    --mid-black: #303037;
-    --secondary-black: #505057;
-    --light-black: #707077;
-    --text-muted: hsl(53, 2%, 45%);
+    --mid-black: #202020;
+    --secondary-black: #404040;
+    --light-black: #606060;
+    --text-muted: #808080;
     --border-light: hsl(0, 0%, 80%);
     --border-warm: #ebe5e0;
 
