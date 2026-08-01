@@ -255,6 +255,7 @@ header.scrolled .resume-btn {
 }
 
 .hero-title {
+  font-family: var(--font-mono);
   font-size: var(--fs-base);
   line-height: 1.6;
   margin-bottom: 0rem;
