@@ -15,6 +15,10 @@
     --border-warm: #ebe5e0;
     --focus-ring: var(--primary-color);
     --focus-offset: 3px;
+    --badge-green-bg: #dcfce7;
+    --badge-green-text: #115e59;
+    --badge-purple-bg: #ede9fe;
+    --badge-purple-text: #4c1d95;
 
     /* Typography */
     --font-heading: "Hanken Grotesk", sans-serif;

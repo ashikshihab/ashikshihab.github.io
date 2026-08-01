@@ -1,3 +1,8 @@
+/* BREAKPOINTS
+ * Mobile: <= 600px
+ * Tablet: 601px - 900px
+ * Desktop: > 900px
+ */
 /* RESET */
 * {
   margin: 0;
@@ -165,7 +170,7 @@ header {
   flex-direction: row;
   align-content: center;
   gap: 1.5rem;
-  background: #CDFEBD;
+  background: var(--primary-hover);
   width: 100%;
   align-items: center;
   justify-content: end;
@@ -192,7 +197,7 @@ header {
   font-family: var(--font-heading);
   font-weight: 400;
   font-size: var(--fs-md);
-  background: #CDFEBD;
+  background: var(--primary-hover);
   border-radius: 1.125rem;
   color: var(--dark-black);
   box-shadow: none;
@@ -208,7 +213,7 @@ header {
 .resume-btn {
   display: flex;
   padding: 1rem 1.5rem;
-  background: #CDFEBD;
+  background: var(--primary-hover);
   border-radius: 1.125rem;
   color: var(--dark-black);
   align-items: center;
@@ -875,7 +880,7 @@ header.scrolled .resume-btn {
   border: 1px solid var(--border-light);
   border-radius: 0.5rem;
   font-family: var(--font-body);
-  font-size: var(--fs-xs) !important;
+  font-size: var(--fs-xs);
   color: var(--light-black);
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -893,7 +898,7 @@ header.scrolled .resume-btn {
 }
 
 .btn-small span {
-  font-size: var(--fs-xs) !important;
+  font-size: var(--fs-xs);
 }
 
 .btn-small:hover {
@@ -1157,12 +1162,12 @@ footer {
 }
 
 .case-principle {
-  font-family: var(--font-heading) !important;
-  font-size: var(--fs-lg) !important;
-  color: var(--dark-black) !important;
-  font-weight: var(--fw-medium) !important;
-  margin: 0 !important;
-  line-height: 1.4 !important;
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: var(--dark-black);
+  font-weight: var(--fw-medium);
+  margin: 0;
+  line-height: 1.4;
 }
 
 .case-final-section {
@@ -1476,7 +1481,7 @@ footer {
 
 @media (max-width: 900px) {
   .hero-social {
-    display: none !important;
+    display: none;
   }
 
   h1, .hero-additional-info {
@@ -1668,7 +1673,7 @@ footer {
 
   .mobile-btn {
     display: flex;
-    margin-top: 0 !important;
+    margin-top: 0;
   }
 
   .about-section {
@@ -1700,14 +1705,14 @@ footer {
   }
 
   .connect-cta-banner {
-    padding: 3rem !important;
-    gap: 1rem !important;
-    flex-direction: column !important;
+    padding: 3rem;
+    gap: 1rem;
+    flex-direction: column;
   }
 
   .connect-cta-banner>div {
-    min-width: 0 !important;
-    max-width: 100% !important;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .connect-item a {
@@ -1716,7 +1721,7 @@ footer {
   }
 
   .hidden-mobile {
-    display: none !important;
+    display: none;
   }
 
   /* Case Study Responsive */
@@ -1732,7 +1737,7 @@ footer {
 
   .case-heading {
     font-size: 1.75rem;
-    width: 100% !important;
+    width: 100%;
   }
 
   .more-work-card {
@@ -1892,7 +1897,7 @@ footer {
 
 .user-card-divider {
   height: 1px;
-  background-color: #424242;
+  background-color: var(--secondary-black);
   margin-top: auto;
   margin-bottom: 1.25rem;
   width: 100%;
@@ -1910,13 +1915,13 @@ footer {
 }
 
 .pill-dashboard {
-  background-color: #dcfce7;
-  color: #115e59;
+  background-color: var(--badge-green-bg);
+  color: var(--badge-green-text);
 }
 
 .pill-explorer {
-  background-color: #ede9fe;
-  color: #4c1d95;
+  background-color: var(--badge-purple-bg);
+  color: var(--badge-purple-text);
 }
 
 .user-card .user-card-cadence {
@@ -1938,7 +1943,7 @@ footer {
   color: var(--accent-blue);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .user-cards-grid {
     grid-template-columns: 1fr;
   }
@@ -1971,7 +1976,7 @@ footer {
 }
 
 /* MOBILE SPECIFIC OVERRIDES */
-@media (max-width: 599px) {
+@media (max-width: 600px) {
   .hero-avatar {
     display: none;
   }
@@ -1995,11 +2000,11 @@ footer {
   }
 
   .connect-cta-banner {
-    padding: 2rem !important;
+    padding: 2rem;
   }
 
   .connect-item a {
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
 
   .about-right {
@@ -2088,4 +2093,20 @@ footer {
   .social-divider {
     display: none;
   }
+}
+/* Extracted from index.html inline styles */
+.hero-cta {
+  align-items: center;
+}
+.about-inline-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.work-info .btn-primary {
+  margin-top: 2rem;
+}
+.work-info .mobile-btn {
+  margin-top: 0;
 }
