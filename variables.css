@@ -1,7 +1,7 @@
 :root {
     /* Colors */
-    --primary-color: hsl(136, 51%, 35%);
-    --primary-hover: #CDFEBD;
+    --primary-color: hsl(136, 51%, 30%);
+    --primary-hover: hsl(105, 97%, 82%);
     --accent-blue: #4E4BE7;
     --accent-blue-hover: #D2D1F9;
     --bg-color: hsl(60, 17%, 94%);

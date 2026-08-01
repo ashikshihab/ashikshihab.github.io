@@ -19,6 +19,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Close nav on outside click
+  document.addEventListener("click", (e) => {
+    if (navContainer.classList.contains("nav-open") && !navContainer.contains(e.target) && !navToggle.contains(e.target)) {
+      navContainer.classList.remove("nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // Close nav on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navContainer.classList.contains("nav-open")) {
+      navContainer.classList.remove("nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.focus();
+    }
+  });
+
   const handleScroll = () => {
     if (window.scrollY > 200) {
       header.classList.add("scrolled");
@@ -137,5 +154,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const resumeLinks = document.querySelectorAll('a[href*="Ashik_Shihab.pdf"]');
   resumeLinks.forEach(link => {
     link.addEventListener("click", () => trackEvent("resume_cta_click"));
+  });
+
+  // 6. Lightbox for case study images
+  const lightboxOverlay = document.createElement("div");
+  lightboxOverlay.className = "lightbox-overlay";
+  lightboxOverlay.innerHTML = `
+    <button class="lightbox-close" aria-label="Close full screen image">×</button>
+    <img src="" alt="" />
+  `;
+  document.body.appendChild(lightboxOverlay);
+
+  const lightboxImg = lightboxOverlay.querySelector("img");
+  const closeBtn = lightboxOverlay.querySelector(".lightbox-close");
+
+  const closeLightbox = () => {
+    lightboxOverlay.classList.remove("active");
+  };
+
+  const openLightbox = (src, alt) => {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightboxOverlay.classList.add("active");
+    closeBtn.focus();
+  };
+
+  document.querySelectorAll(".case-image-wrapper img").forEach(img => {
+    // Make sure images have tabIndex for accessibility
+    img.setAttribute("tabindex", "0");
+    img.addEventListener("click", () => {
+      openLightbox(img.src, img.alt);
+    });
+    img.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openLightbox(img.src, img.alt);
+      }
+    });
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+  lightboxOverlay.addEventListener("click", (e) => {
+    if (e.target === lightboxOverlay) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightboxOverlay.classList.contains("active")) {
+      closeLightbox();
+    }
   });
 });
