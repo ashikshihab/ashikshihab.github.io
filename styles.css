@@ -537,6 +537,7 @@ header.scrolled .resume-btn {
   justify-content: space-between;
   height: 100%;
   gap: 5rem;
+  padding: 0.5rem 0;
 }
 
 .work-header {
