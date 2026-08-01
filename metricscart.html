@@ -63,7 +63,7 @@
                 </div>
                 <a href="Ashik_Shihab.pdf" class="resume-btn" target="_blank">
                     <span>Resume</span>
-                    <img src="assets/arrow.svg" width="20" height="20" alt="Arrow Icon" />
+                    <img src="assets/arrow.svg" width="20" height="20" alt="" />
                 </a>
             </div>
         </div>
@@ -82,7 +82,7 @@
             </div>
 
             <div class="case-main-image">
-                <img src="assets/mc-casestudy-heroimg.png" alt="MetricsCart Hero Image" />
+                <img src="assets/mc-casestudy-heroimg.png" alt="MetricsCart availability monitoring dashboard showing KPI cards, incident charts, and platform filters" />
             </div>
 
             <div class="text-container">
@@ -103,11 +103,10 @@
                         </ul>
                     </div>
                     <div class="meta-column">
-                        <span class="meta-title">Team</span>
+                        <span class="meta-title">Signals</span>
                         <ul>
-                            <li>1 PO</li>
-                            <li>1 analyst</li>
-                            <li>5-6 engineers</li>
+                            <li>Podcast (domain experts)</li>
+                            <li>Sales team</li>
                         </ul>
                     </div>
                 </div>
@@ -121,7 +120,7 @@
                     <h3>Context</h3>
                     <p>MetricsCart tracks how brands perform on quick-commerce platforms. Blinkit, Zepto, Instamart. A brand needs to know if their product is in stock, priced right, and running the promos they paid for, across every platform and location, every day.</p>
                     <p>I was handed a doc. KPIs, features, data structure. A spec, not a brief.</p>
-                    <p>That gap was the job: turn a data structure into a product three different people could use. Solo, no research team.</p>
+                    <p>That gap was the job: turn a data structure into a product three different people could use. Solo, no research team. I worked with 1 PO, 1 analyst, and 5-6 engineers.</p>
                 </div>
 
             </div>
@@ -142,11 +141,54 @@
                 <div class="text-container">
                     <h3>Who I designed for</h3>
                     <p>One product, three jobs, competing needs. That tension drove the architecture.</p>
-                    <ul>
-                        <li><span class="bold">Brand managers</span> track their own SKUs and explain anomalies internally. Need fast scan, clear signal. &rarr; Dashboard</li>
-                        <li><span class="bold">Agencies</span> manage many client portfolios and pull views into reports. Need fast context switching. &rarr; Dashboard</li>
-                        <li><span class="bold">Researchers</span> slice category-wide data, compare, export. Need raw access and deep filtering. &rarr; Explorer</li>
-                    </ul>
+                    <div class="user-cards-grid">
+                        <div class="user-card">
+                            <div class="user-card-col">
+                                <h4>Brand managers</h4>
+                                <p class="user-card-desc user-card-cadence">Every morning, <br class="desktop-br">short session</p>
+                                <p class="user-card-desc user-card-surface">Lives in: <strong>Dashboard</strong></p>
+                            </div>
+                            <div class="user-card-col">
+                                <div class="user-card-label">JOB</div>
+                                <p class="user-card-desc">Track their own SKUs. Catch stock-outs and price changes, explain the dip internally.</p>
+                            </div>
+                            <div class="user-card-col">
+                                <div class="user-card-label">NEEDS</div>
+                                <p class="user-card-desc">What changed since yesterday. One fast scan, clear signal.</p>
+                            </div>
+                        </div>
+                        <div class="user-card">
+                            <div class="user-card-col">
+                                <h4>Agencies</h4>
+                                <p class="user-card-desc user-card-cadence">Daily checks, <br class="desktop-br">weekly reporting</p>
+                                <p class="user-card-desc user-card-surface">Lives in: <strong>Dashboard</strong></p>
+                            </div>
+                            <div class="user-card-col">
+                                <div class="user-card-label">JOB</div>
+                                <p class="user-card-desc">Manage several client brands. Pull recurring views into client reports, flag issues early.</p>
+                            </div>
+                            <div class="user-card-col">
+                                <div class="user-card-label">NEEDS</div>
+                                <p class="user-card-desc">Switch clients without rebuilding filters. Same view, every cycle.</p>
+                            </div>
+                        </div>
+                        <div class="user-card">
+                            <div class="user-card-col">
+                                <h4>Researchers</h4>
+                                <p class="user-card-desc user-card-cadence">Occasional, <br class="desktop-br">long working session</p>
+                                <p class="user-card-desc user-card-surface is-explorer">Lives in: <strong>Explorer</strong></p>
+                            </div>
+                            <div class="user-card-col">
+                                <div class="user-card-label">JOB</div>
+                                <p class="user-card-desc">Slice data across the category. Compare competitors, export rows into their own models.</p>
+                            </div>
+                            <div class="user-card-col">
+                                <div class="user-card-label">NEEDS</div>
+                                <p class="user-card-desc">Raw rows, not summaries. Deep filtering, every dimension available.</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -164,7 +206,7 @@
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Decision 1: Overview and explorer</h3>
+                    <h3>Overview and explorer</h3>
                     <p>The daily rhythm gave me the split.</p>
                     <p><span class="bold">Dashboard is the overview.</span> KPI cards, each carrying its day-over-day change. Green good, red bad. It answers what changed since yesterday? You open it in the morning and the deltas tell you where to look.</p>
                     <p><span class="bold">Explorer is the power tool.</span> The tabular view. Once a delta flags something, you come here for why, and where exactly?</p>
@@ -175,34 +217,38 @@
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Decision 2: The explorer's columns</h3>
+                    <h3>The explorer's columns</h3>
                     <p>The stakeholder wanted every column visible. Across both features that is 20-30. The instinct was fair: brands paid for this data.</p>
                     <p>A table that wide is unusable, and scanning is the whole job of the explorer. So the question was not which columns to cut. It was which earn a permanent seat, and where the rest lives without leaving the table.</p>
                     <p>I split columns by how they get used.</p>
                     <p><span class="bold">Scan-across data stays as columns.</span> The metrics you read horizontally to spot an anomaly: product, availability, price, discount, promo flags, each with its day-over-day change.</p>
                     <p><span class="bold">Read-about-one data goes in the row.</span> The metadata you only check for a single product after something catches your eye: flavour, pack, location breakdown, category mapping. Each row expands in place into grouped detail. One row open at a time, same table.</p>
+                    <p>I built the expansion as a sub-table first. It puts a second header under the parent's, aligned to nothing, and detail about one product ends up looking like more products. Grouped label and value pairs read as subordinate without any of that.</p>
                     <p>The table stays narrow and scannable. Completeness is one click away and never lost.</p>
                 </div>
-
+                <div class="case-image-wrapper">
+                    <img src="assets/The expanded row, two ways.png" alt="Two states of an expanded table row: a flat sub-table with its own header row, and grouped label-value pairs under product, location, and category headings" />
+                    <p class="case-image-caption">Two ways to hold the metadata. The sub-table repeats a header and aligns to nothing. The grouped panel reads as detail, not as more rows.</p>
+                </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Decision 3: How filtering works</h3>
+                    <h3>How filtering works</h3>
                     <p>Two patterns to decide between.</p>
                     <p><span class="bold">Chip filter with operators.</span> Brand IS Coca-Cola, Retailer IS NOT Blinkit. Expressive, demos well, but a learning curve.</p>
                     <p><span class="bold">Column filters.</span> Click a header, pick values, apply. Familiar, immediately legible.</p>
                     <p>I built the chip pattern to mid-fi, then shipped column filters. Brand managers and agencies pass through occasionally and read column filters on sight. Researchers spend the most time here and would outgrow them, but that is a v2 problem, not a v1 blocker. I did not want the daily user paying a learning tax to serve a power case I could add later.</p>
                 </div>
                 <div class="case-image-wrapper">
-                    <img src="assets/Mid-fidelity-filter.png" alt="Mid-fidelity chip filter exploration" />
+                    <img src="assets/Mid-fidelity-filter.png" alt="Mid-fidelity chip filter exploration with operator dropdowns for product, SKU, and location fields" />
                     <p class="case-image-caption">The chip pattern I explored before deciding on column filters.</p>
                 </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Decision 4: The expand interaction</h3>
+                    <h3>The expand interaction</h3>
                     <p>Charts on the dashboard are scannable but shallow. A user who spots something wants to dig in without losing their place.</p>
                     <p>I designed expand as a focused workspace, not a popup. It opens a full-screen surface with two live layers: the chart, still interactive, and the underlying table beneath it. Work either layer and both reflect it. The dashboard sits underneath, one close away.</p>
                 </div>
@@ -211,39 +257,45 @@
 
             <div class="case-section">
                 <div class="text-container">
-                    <h3>Decision 5: Geographic drill-down</h3>
-                    <p>Incidents track across country, state, district, city. The most layout-intensive view.</p>
-                    <p>The map changes representation as you drill in: choropleth of India at country level, the same gradient at district level, sized bubbles at city level. Filters persist across every level.</p>
-                    <p>The hard part was the transitions. I held one rule: the map's position and behaviour stay constant, only granularity changes. Same object, more detail. Never a new screen.</p>
+                    <h3>Geographic drill-down</h3>
+                    <p>Incidents track across country, state, and district. The most layout-intensive view.</p>
+                    <p>The map changes representation as you drill in. Choropleth of India at country level, the same gradient across districts at state level, and at district level a switch from region fill to incident points.</p>
+                    <p>That switch is the call. The choropleth answers which regions are worst. It cannot answer where inside them. So at district level the fill drops out and points take over, plotted at city and pin code, sized by incident volume. Intensity and location read on one surface instead of in two views.</p>
+                    <p>The hard part was the transitions. I held one rule: the map's behaviour stays constant, only granularity changes. Same object, more detail. Never a new screen.</p>
                 </div>
-
+                <div class="case-image-wrapper">
+                    <img src="assets/geographic drill-down.png" alt="Incident map at three levels: choropleth of India at country level, districts shaded across Kerala at state level, and incident points across Ernakulam at district level" />
+                    <p class="case-image-caption">Country to state to district. At district level the fill gives way to incident points at city and pin code.</p>
+                </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
                     <h3>The marketing site</h3>
-                    <p>I also built the marketing site in WordPress, restructured around the problems users arrive with. CTA clicks went from ~500 to ~8,000 a month, generating around 12 qualified demos a month versus zero before. That pipeline feeds product discovery. The product work above is the case.</p>
+                    <p>I also built the marketing site in WordPress, restructured around the problems users arrive with. It now generates around 12 qualified demos a month from a baseline of zero.</p>
                 </div>
             </div>
 
             <div class="case-section">
                 <div class="text-container">
                     <h3>Reflection</h3>
-                    <p>Proxy research gave strong direction, not ground truth, so the uncertain calls stayed reversible. The chip filter earns in if usage shows researchers hitting the column-filter ceiling. What held across every decision was the spine: build a dense product around what changed, not what is, and never let density fragment the surface.</p>
+                    <p>Proxy research gave strong direction, not ground truth, so the uncertain calls stayed reversible.</p>
+                    <p>V1 is in production. Usage data is not back yet, so none of these calls have been validated against real behaviour. The reversibility was the point. The chip filter earns in if usage shows researchers hitting the column-filter ceiling.</p>
+                    <p>What held across every decision was the spine: build a dense product around what changed, not what is, and never let density fragment the surface.</p>
                 </div>
             </div>
         </section>
 
     </main>
-    <footer style="border-top: 1px solid var(--border-light); padding: 2rem 0;">
-        <div class="container" style="max-width: 1000px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-            <div style="font-family: var(--font-heading); font-weight: var(--fw-medium);">Ashik Shihab</div>
-            <div style="display: flex; gap: 1rem; font-size: var(--fs-xs); font-family: var(--font-mono);">
-                <a href="https://www.linkedin.com/in/ashik-shihab/" target="_blank" style="color: var(--light-black); font-size: var(--fs-xs); font-family: var(--font-mono); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--light-black)'">LinkedIn</a>
-                <span style="color: var(--border-light); display: flex; align-items: center;">|</span>
-                <button onclick="navigator.clipboard.writeText('ashikshihab101@gmail.com'); const text = this; const origText = 'ashikshihab101@gmail.com'; text.innerText = 'Copied!'; setTimeout(() => { text.innerText = origText; }, 2000);" style="color: var(--light-black); font-size: var(--fs-xs); font-family: var(--font-mono); text-decoration: none; transition: var(--transition-smooth); background: none; border: none; padding: 0; cursor: pointer;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--light-black)'">ashikshihab101@gmail.com</button>
-            </div>
+    <footer class="site-footer">
+      <div class="container site-footer-inner">
+        <div class="site-footer-logo">Ashik Shihab</div>
+        <div class="social-links-wrapper">
+          <a href="https://www.linkedin.com/in/ashik-shihab/" target="_blank" class="social-link" aria-label="LinkedIn profile">LinkedIn</a>
+          <span class="social-divider">|</span>
+          <button class="social-link" onclick="navigator.clipboard.writeText('ashikshihab101@gmail.com'); const text = this; const origText = 'ashikshihab101@gmail.com'; text.innerText = 'Copied!'; setTimeout(() => { text.innerText = origText; }, 2000);" aria-label="Copy email address">ashikshihab101@gmail.com</button>
         </div>
+      </div>
     </footer>
     <script src="script.js"></script>
 </body>

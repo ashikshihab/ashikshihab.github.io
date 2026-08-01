@@ -2,6 +2,8 @@
     /* Colors */
     --primary-color: hsl(136, 51%, 35%);
     --primary-hover: #CDFEBD;
+    --accent-blue: #4E4BE7;
+    --accent-blue-hover: #D2D1F9;
     --bg-color: hsl(60, 17%, 94%);
     --dark-black: #000;
     --white: #fafaf9;
