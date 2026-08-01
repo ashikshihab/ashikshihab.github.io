@@ -56,12 +56,12 @@
     <div class="container container-nav">
       <a href="/" class="logo" id="home-logo">AS</a>
       <div class="nav-spacer"></div>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div class="mobile-menu">
+      <div class="mobile-menu" id="mobile-menu">
         <div class="nav">
           <a href="#work">Work</a>
           <a href="#about">About</a>
@@ -78,7 +78,7 @@
       <div class="hero-intro-container">
         <img src="assets/ashik-shihab-1.jpg" alt="" class="hero-avatar">
         <div>
-          <div class="hero-title">Hi, I'm Ashik Shihab</div>
+          <p class="hero-title">Hi, I'm Ashik Shihab</p>
           <p class="hero-role-text">Product Designer | B2B SaaS | 4+ Years</p>
         </div>
       </div>
@@ -99,7 +99,7 @@
             Connect
           </a>
           <span class="social-divider">|</span>
-          <button class="social-link" onclick="navigator.clipboard.writeText('ashikshihab101@gmail.com'); const icon = this.querySelector('.copy-icon'); const text = this.querySelector('.copy-text'); const origIcon = icon.innerHTML; icon.innerHTML = '<polyline points=\'20 6 9 17 4 12\'></polyline>'; text.innerText = 'Copied!'; setTimeout(() => { icon.innerHTML = origIcon; text.innerText = 'Copy Mail'; }, 2000);" aria-label="Copy email address">
+          <button class="social-link js-copy-btn" data-copy="ashikshihab101@gmail.com" aria-label="Copy Email">
             <svg aria-hidden="true" class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             <span class="copy-text">Copy Mail</span>
           </button>
@@ -247,7 +247,7 @@
       </div>
     </section>
     <section id="about" class="container about-section">
-      <h2>About</br> <span class="text-accent">Me</span></h2>
+      <h2>About<br /> <span class="text-accent">Me</span></h2>
       <div class="about-content">
         <div class="about-left">
           <p>
@@ -316,7 +316,7 @@
       <div class="social-links-wrapper">
         <a href="https://www.linkedin.com/in/ashik-shihab/" target="_blank" class="social-link" aria-label="LinkedIn profile">LinkedIn</a>
         <span class="social-divider">|</span>
-        <button class="social-link" onclick="navigator.clipboard.writeText('ashikshihab101@gmail.com'); const text = this; const origText = 'ashikshihab101@gmail.com'; text.innerText = 'Copied!'; setTimeout(() => { text.innerText = origText; }, 2000);" aria-label="Copy email address">ashikshihab101@gmail.com</button>
+        <button class="social-link js-copy-btn" data-copy="ashikshihab101@gmail.com" aria-label="Copy Email">ashikshihab101@gmail.com</button>
       </div>
     </div>
   </footer>

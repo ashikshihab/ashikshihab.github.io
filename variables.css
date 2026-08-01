@@ -13,6 +13,8 @@
     --text-muted: #808080;
     --border-light: hsl(0, 0%, 80%);
     --border-warm: #ebe5e0;
+    --focus-ring: var(--primary-color);
+    --focus-offset: 3px;
 
     /* Typography */
     --font-heading: "Hanken Grotesk", sans-serif;

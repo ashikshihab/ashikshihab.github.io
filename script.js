@@ -7,12 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navToggle.addEventListener("click", () => {
     navContainer.classList.toggle("nav-open");
+    const isOpen = navContainer.classList.contains("nav-open");
+    navToggle.setAttribute("aria-expanded", isOpen);
   });
 
   const navLinks = navContainer.querySelectorAll(".nav a");
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       navContainer.classList.remove("nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
     });
   });
 
@@ -45,6 +48,80 @@ document.addEventListener("DOMContentLoaded", () => {
   const mailCopyButtons = document.querySelectorAll('button[aria-label="Copy Email"]');
   mailCopyButtons.forEach(btn => {
     btn.addEventListener("click", () => trackEvent("mail_click"));
+  });
+
+  // Copy to clipboard functionality
+  const COPY_ICON_SVG = '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>';
+  const CHECK_ICON_SVG = '<polyline points="20 6 9 17 4 12"></polyline>';
+
+  const fallbackCopyTextToClipboard = (text) => {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      const successful = document.execCommand('copy');
+      document.body.removeChild(textArea);
+      if (!successful) throw new Error('execCommand failed');
+      return Promise.resolve();
+    } catch (err) {
+      document.body.removeChild(textArea);
+      return Promise.reject(err);
+    }
+  };
+
+  const copyTextToClipboard = (text) => {
+    if (!navigator.clipboard) {
+      return fallbackCopyTextToClipboard(text);
+    }
+    return navigator.clipboard.writeText(text);
+  };
+
+  const copyBtns = document.querySelectorAll('.js-copy-btn');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      // Prevent double-clicking
+      if (btn.dataset.copying === "true") return;
+      
+      const email = btn.dataset.copy || 'ashikshihab101@gmail.com';
+      const icon = btn.querySelector('.copy-icon');
+      const textElem = btn.querySelector('.copy-text') || btn; // Footer buttons are just text
+      
+      const originalText = textElem.innerText;
+      
+      btn.dataset.copying = "true";
+
+      try {
+        await copyTextToClipboard(email);
+        
+        // Success
+        textElem.innerText = 'Copied!';
+        if (icon) icon.innerHTML = CHECK_ICON_SVG;
+        
+      } catch (err) {
+        console.error('Failed to copy', err);
+        // Fallback if everything fails
+        textElem.innerText = 'Press Ctrl+C to copy';
+        
+        // Optionally show as selectable text for manual copy (not ideal for buttons, but okay temporarily)
+        // btn.innerText = email; 
+      }
+
+      // Revert after 2 seconds
+      setTimeout(() => {
+        textElem.innerText = originalText;
+        if (icon) icon.innerHTML = COPY_ICON_SVG;
+        btn.dataset.copying = "false";
+      }, 2000);
+    });
   });
 
   // 4. Track LinkedIn clicks in "Let's Connect" section

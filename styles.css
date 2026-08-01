@@ -10,6 +10,17 @@ html {
   scroll-behavior: smooth;
 }
 
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+  border-radius: 2px; /* subtle softening for the outline */
+}
+
+/* Ensure no elements use outline: none without fallback. Global fallback applies */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* GLOBAL BODY STYLES */
 body {
   background: var(--bg-color);
@@ -1475,6 +1486,7 @@ footer {
   .hero-subtitle {
     max-width: 100%;
     font-size: var(--fs-base);
+    margin-bottom: 3rem;
   }
 
   .hero-toolkit {
